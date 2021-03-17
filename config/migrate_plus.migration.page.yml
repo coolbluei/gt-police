@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies: {  }
+id: page
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: main_group
+label: 'Page'
+source:
+  plugin: d7_node
+  node_type: page
+process:
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid:
+    plugin: default_value
+    source: 1
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  body:
+    plugin: iterator
+    source: body
+    process:
+      value: value
+      format:
+        plugin: default_value
+        default_value: 'full_html'
+destination:
+  plugin: 'entity:node'
+  default_bundle: page
+migration_dependencies:
+  required: {  }
+  optional: {  }
