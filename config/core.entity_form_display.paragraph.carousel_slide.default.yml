@@ -16,7 +16,7 @@ mode: default
 content:
   field_image:
     type: media_library_widget
-    weight: 0
+    weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -30,7 +30,7 @@ content:
     type: string_textarea
     region: content
   field_title:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
