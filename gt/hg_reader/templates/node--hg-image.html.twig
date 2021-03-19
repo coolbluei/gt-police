@@ -1,0 +1,30 @@
+{# HG Mercury Image Template #}
+
+{# Attached Style Sheet #}
+{{ attach_library('hg_reader/hg_reader') }}
+
+{# Content Start #}
+<div id="mercury" class="row mb-5 clearfix">
+
+  {# Set Main Container #}
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    {# Image/s #}
+    {% if content.field_hg_images is not empty %}
+      <div class="hg-images px-1">
+        <picture>
+          {% if content.field_hg_images is defined %}
+            {{ content.field_hg_images }}
+          {% else %}
+          {% endif %}
+        </picture>
+      </div>
+    {% endif %}
+    {# Description #}
+    {% if content.body is not empty %}
+      {# content #}
+      <div class="description px-1">
+        {{ content.body[0] }}
+      </div>
+    {% endif %}
+  </div>
+</div>

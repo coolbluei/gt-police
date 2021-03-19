@@ -1,0 +1,377 @@
+{# HG Mercury Profile Template #}
+
+{# Attached Style Sheet #}
+{{ attach_library('hg_reader/hg_reader') }}
+
+{# Set Div ID #}
+{% set hg_id = 'mercury' %}
+{% set hg_name_id = 'hg-name' %}
+{% set hg_contact_id = 'hg-contact' %}
+
+{# Set Content CSS Classes #}
+{% set classes = [
+    'label',
+    'content',
+    'pt-1',
+    'pb-1',
+] %}
+
+{# Set Row Class #}
+{% set classRow = 'row mb-5 clearfix' %}
+
+{# Bootstrap Col Width classes #}
+{% set colFull = "col-md-12 col-sm-12 col-xs-12" %}
+
+{# Content Start # }
+
+{# Set Div wrapper ID #}
+<div{{ attributes.setAttribute('id', hg_id) }}>
+
+    {# Set Row Container #}
+    <div class="{{ classRow }}">
+
+        {# Set Main Container #}
+        <div class="{{ colFull }}">
+
+            {# Alternate Job Title #}
+            {% if content.field_hg_alternate_job_title|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('alternate-job-title', classes).removeClass('content').removeAttribute('id') }}>
+                    {{ content.field_hg_alternate_job_title['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_alternate_job_title[0] }}
+                </div>
+            {% endif %}
+
+            {# Biography - Summary #}
+            {% if node.body.summary|render is not empty %}
+                {# content #}
+                <div{{ attributes.addClass('biography-summary', classes).removeClass('label', 'alternate-job-title') }}>
+                    {{ node.body.summary }}
+                </div>
+            {% endif %}
+
+            {# Biography #}
+            {% if content.body|render is not empty %}
+                {# content #}
+                <div{{ attributes.addClass('biography', classes).removeClass('label', 'biography-summary') }}>
+                    {{ content.body[0] }}
+                </div>
+            {% endif %}
+
+            {# Name #}
+            {# label #}
+            {% if content.field_hg_first_name|render is not empty
+                or content.field_hg_middle_name|render is not empty
+                or content.field_hg_last_name|render is not empty
+                or content.field_hg_nickname|render is not empty %}
+                <div{{ attributes.addClass('name', 'label').removeClass('biography', 'content') }}>
+                    Contact
+                </div>
+            {% endif %}
+
+            {# content #}
+            {% if content.field_hg_first_name|render is not empty
+                or content.field_hg_middle_name|render is not empty
+                or content.field_hg_last_name|render is not empty
+                or content.field_hg_nickname|render is not empty %}
+                <div {{ attributes.setAttribute('id', hg_name_id).removeClass('label', 'name') }}>
+
+                    {# First Name #}
+                    {% if content.field_hg_first_name|render is not empty %}
+                        <span{{ attributes.addClass('first-name').removeAttribute('id') }}>{{ content.field_hg_first_name[0] }}</span>
+                    {% endif %}
+
+                    {# Nickname #}
+                    {% if content.field_hg_nickname|render is not empty %}
+                        <span{{ attributes.addClass('nickname').removeClass('first-name') }}>({{ content.field_hg_nickname[0] }}
+                            )</span>
+                    {% endif %}
+
+                    {# Middle Name #}
+                    {% if content.field_hg_middle_name|render is not empty %}
+                        <span{{ attributes.addClass('middle-name').removeClass('nickname') }}>{{ content.field_hg_middle_name[0] }}</span>
+                    {% endif %}
+
+                    {# Last Name #}
+                    {% if content.field_hg_last_name|render is not empty %}
+                        <span{{ attributes.addClass('last-name').removeClass('middle-name') }}>{{ content.field_hg_last_name[0] }}</span>
+                    {% endif %}
+
+
+                </div>
+                {# End Name #}
+            {% endif %}
+
+            {# Contact #}
+            {# label #}
+            {% if content.field_hg_phone_number|render is not empty
+                or content.field_hg_mobile_phone|render is not empty
+                or content.field_hg_primary_email|render is not empty
+                or content.field_hg_secondary_email|render is not empty
+                or content.field_hg_fax_number|render is not empty
+                or content.field_hg_street_address|render is not empty
+                or content.field_hg_city|render is not empty
+                or content.field_hg_state|render is not empty
+                or content.field_hg_zip_code|render is not empty
+                or content.field_hg_related_links|render is not empty %}
+                <div{{ attributes.addClass('contact', 'label').removeClass('last-name') }}>
+                    Contact Information
+                </div>
+            {% endif %}
+
+            {# ID #}
+            {% if content.field_hg_phone_number|render is not empty
+                or content.field_hg_mobile_phone|render is not empty
+                or content.field_hg_primary_email|render is not empty
+                or content.field_hg_secondary_email|render is not empty
+                or content.field_hg_fax_number|render is not empty
+                or content.field_hg_street_address|render is not empty
+                or content.field_hg_city|render is not empty
+                or content.field_hg_state|render is not empty
+                or content.field_hg_zip_code|render is not empty
+                or content.field_hg_related_links|render is not empty %}
+                <div {{ attributes.setAttribute('id', hg_contact_id).addClass('card').removeClass('contact', 'label') }}>
+
+                    {# Phone Number #}
+                    {% if content.field_hg_phone_number|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('phone-number', classes).removeClass('content', 'card').removeAttribute('id') }}>
+                            {{ content.field_hg_phone_number['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_phone_number[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# Mobile Number #}
+                    {% if content.field_hg_mobile_phone|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('mobile-phone', classes).removeClass('content', 'phone-number') }}>
+                            {{ content.field_hg_mobile_phone['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_mobile_phone[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# Primary Email #}
+                    {% if content.field_hg_primary_email|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('primary-email', classes).removeClass('content', 'mobile-phone') }}>
+                            {{ content.field_hg_primary_email['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_primary_email[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# Secondary Email #}
+                    {% if content.field_hg_secondary_email|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('secondary-email', classes).removeClass('content', 'primary-email') }}>
+                            {{ content.field_hg_secondary_email['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_secondary_email[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# Fax Number #}
+                    {% if content.field_hg_fax_number|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('fax-number', classes).removeClass('content', 'secondary-email') }}>
+                            {{ content.field_hg_fax_number['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_fax_number[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# Street Address #}
+                    {% if content.field_hg_street_address|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('street-address', classes).removeClass('content', 'fax-number') }}>
+                            {{ content.field_hg_street_address['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_street_address[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# City #}
+                    {% if content.field_hg_city|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('city', classes).removeClass('content', 'street-address') }}>
+                            {{ content.field_hg_city['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_city[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# State #}
+                    {% if content.field_hg_state|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('state', classes).removeClass('content', 'city') }}>
+                            {{ content.field_hg_state['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_state[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# Zip Code #}
+                    {% if content.field_hg_zip_code|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('zip-code', classes).removeClass('content', 'state') }}>
+                            {{ content.field_hg_zip_code['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass(classes).removeClass('label') }}>
+                            {{ content.field_hg_zip_code[0] }}
+                        </div>
+                    {% endif %}
+
+                    {# URL #}
+                    {% if content.field_hg_related_links|render is not empty %}
+                        {# label #}
+                        <div{{ attributes.addClass('related-links', classes).removeClass('content', 'zip-code') }}>
+                            {{ content.field_hg_related_links['#title'] }}
+                        </div>
+                        {# content #}
+                        <div{{ attributes.addClass('files', classes).removeClass('label') }}>
+                            {{ content.field_hg_related_links }}
+                        </div>
+                    {% endif %}
+                </div> {# End Contact #}
+            {% endif %}
+
+            {# Degree #}
+            {% if content.field_hg_degree|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('degree', classes).removeClass('content', 'files', 'related-links') }}>
+                    {{ content.field_hg_degree['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_degree }}
+                </div>
+            {% endif %}
+
+            {# Classification #}
+            {% if content.field_hg_classification|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('classification', classes).removeClass('content', 'degree') }}>
+                    {{ content.field_hg_classification['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass( 'label') }}>
+                    {{ content.field_hg_classification }}
+                </div>
+            {% endif %}
+
+            {# Summary #}
+            {% if content.field_hg_summary|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('summary', classes).removeClass('content', 'alternate-job-title', 'classification') }}>
+                    {{ content.field_hg_summary['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_summary[0] }}
+                </div>
+            {% endif %}
+
+            {# Teaching #}
+            {% if content.field_hg_teaching|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('teaching', classes).removeClass('content', 'summary') }}>
+                    {{ content.field_hg_teaching['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass( 'label') }}>
+                    {{ content.field_hg_teaching }}
+                </div>
+            {% endif %}
+
+            {# Research #}
+            {% if content.field_hg_research|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('research', classes).removeClass('content', 'teaching') }}>
+                    {{ content.field_hg_research['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_research }}
+                </div>
+            {% endif %}
+
+            {# Job Title #}
+            {% if content.field_hg_job_title|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('job-title', classes).removeClass('content', 'research') }}>
+                    {{ content.field_hg_job_title['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_job_title }}
+                </div>
+            {% endif %}
+
+            {# Alternate Job Title #}
+            {% if content.field_hg_alternate_job_title|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('alternate-job-title', classes).removeClass('content', 'job-title') }}>
+                    {{ content.field_hg_alternate_job_title['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_alternate_job_title }}
+                </div>
+            {% endif %}
+
+            {# Related Link #}
+            {% if content.field_hg_related_links|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('related-links', classes).removeClass('content', 'alternate-job-title') }}>
+                    {{ content.field_hg_related_links['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_related_links }}
+                </div>
+            {% endif %}
+
+            {# Related Link #}
+            {% if content.field_hg_related_files|render is not empty %}
+                {# label #}
+                <div{{ attributes.addClass('related-files', classes).removeClass('content', 'related-links') }}>
+                    {{ content.field_hg_related_files['#title'] }}
+                </div>
+                {# content #}
+                <div{{ attributes.addClass(classes).removeClass('label') }}>
+                    {{ content.field_hg_related_files }}
+                </div>
+            {% endif %}
+
+        </div>
+        {# End Main Container #}
+
+    </div>
+    {# Set Row Container #}
+
+</div>
+{# End Div Wrapper ID #}
+
+{# End Mercury Profile Template #}

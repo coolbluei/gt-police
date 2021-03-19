@@ -1,0 +1,8 @@
+<?php
+
+function gt_tools_installed() {
+  // This is a dummy function the GT theme uses to check whether the module is
+  // installed. This is necessary because we live in fundamentally broken world
+  // and are forced to engage in bullshit workarounds.
+  return TRUE;
+}

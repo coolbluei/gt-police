@@ -1,0 +1,58 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function hg_reader_install() {
+  $config = \Drupal::service('config.factory')->getEditable('hg_reader.settings');
+  $config->set('fresh_install', TRUE)->save();
+}
+
+function hg_reader_uninstall() {
+  $config = \Drupal::service('config.factory')->getEditable('hg_reader.settings');
+  $config->delete();
+}
+
+function hg_reader_schema() {
+  $schema['hg_reader_log'] = [
+    'description' => 'Stores log entries for Mercury Reader-created nodes.',
+    'fields' => [
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Mercury node nid",
+      ],
+      'timestamp' => [
+        'description' => 'The Unix timestamp when the node was viewed.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ]
+  ];
+
+  return $schema;
+}
+
+function hg_reader_update_8001(&$sandbox) {
+  $spec = [
+    'description' => 'Stores log entries for Mercury Reader-created nodes.',
+    'fields' => [
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Mercury node nid",
+      ],
+      'timestamp' => [
+        'description' => 'The Unix timestamp when the node was viewed.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ]
+  ];
+
+  $schema = Database::getConnection()->schema();
+  $schema->createTable('hg_reader_log', $spec);
+}

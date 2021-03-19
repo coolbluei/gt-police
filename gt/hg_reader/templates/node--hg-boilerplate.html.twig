@@ -1,0 +1,26 @@
+{# HG Boilerplate Template #}
+
+{# Attached Style Sheet #}
+{{ attach_library('hg_reader/hg_reader') }}
+
+{# Set Row Classes #}
+{% set classRow = 'row mb-5 clearfix' %}
+
+{# Content Start #}
+
+{# Set Div Wrapper ID #}
+<div id="mercury" class="row mb-5 clearfix">
+
+  {# Set Main Container #}
+  <div class="col-md-12 col-sm-12 col-xs-12">
+
+    {# Description #}
+    {% if content.body is not empty %}
+      <div class="content boilerplate">
+        {{ content.body }}
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>

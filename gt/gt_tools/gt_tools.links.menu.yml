@@ -1,0 +1,13 @@
+gt_tools.gt_tools:
+  title: 'GT Tools'
+  parent: system.admin_config
+  description: 'Configure GT Tools.'
+  route_name: gt_tools.gt_tools
+  weight: -1
+
+gt_tools.admin_settings:
+  title: 'GT Tools settings'
+  parent: gt_tools.gt_tools
+  description: 'Configure GT Tools.'
+  route_name: gt_tools.admin_settings
+  weight: 0

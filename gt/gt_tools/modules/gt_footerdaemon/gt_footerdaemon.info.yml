@@ -1,0 +1,7 @@
+name: GT Footer Daemon
+type: module
+description: Let the GT Footer Daemon work for you! This little beauty will keep
+  your stock GT superfooter entirely up to date, sparing you the toil of editing
+  a million links and sparing your users the pain of endless 404s. Everybody wins!
+package: GT
+core: 8.x

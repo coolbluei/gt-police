@@ -1,0 +1,156 @@
+<?php
+/**
+* Georgia Institute of Technology Mercury Feed Reader
+*
+* This file contains functions used to read and display Mercury feeds (hg.gatech.edu)
+*
+* @author Office of Communications and Marketing <web@comm.gatech.edu>
+*
+*/
+
+namespace Drupal\hg_reader\Controller;
+
+use Drupal\hg_reader\HgImporterInterface;
+use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Database\Connection;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+/**
+ * Returns responses for aggregator module routes.
+ */
+class HgImporterController extends ControllerBase {
+
+  /**
+   * The messenger service.
+   *
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+  protected $database;
+
+  public function __construct(MessengerInterface $messenger = NULL, Connection $database = NULL) {
+    if ($messenger) {
+      $this->messenger = $messenger;
+    }
+    if ($database) {
+      $this->database = $database;
+    }
+  }
+
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('messenger'),
+      $container->get('database')
+    );
+  }
+
+  public function process_importer(HgImporterInterface $hg_reader_importer) {
+    // Delete nodes on delete list.
+    if (!isset($this->full_deleted_list)) {
+      $this->full_deleted_list = $hg_reader_importer->get_deleted();
+    }
+
+    $hg_reader_importer->delete_tracked($hg_reader_importer, $this->full_deleted_list);
+
+    // Update nodes on update list.
+    $this->update_nodes($hg_reader_importer);
+
+    // Pull new nodes
+    $this->import_nodes($hg_reader_importer);
+
+    // return to importer list
+    return $this->redirect('entity.hg_reader_importer.collection');
+  }
+
+  public function import_nodes(HgImporterInterface $hg_reader_importer) {
+    $iid = $hg_reader_importer->get('id')->getString();
+    $fid = $hg_reader_importer->get('fid')->getString();
+    $name = $hg_reader_importer->get('name')->getString();
+
+    // First check if this even needs doing.
+    if (!$hg_reader_importer->audit_remote($fid)) {
+      if ($this->messenger) {
+        $this->messenger->addMessage($this->t('Nothing to import from <em>@importer_name</em>.',
+          array(
+            '@importer_name' => $name,
+          )
+        ));
+      }
+      return $this->redirect('entity.hg_reader_importer.collection');
+    }
+
+    // pull data for this importer
+    $xml = $hg_reader_importer->pull_remote($fid);
+
+    // TODO: Error handling here. Ha ha ha.
+    // if (!$xml) { continue; }
+
+    // get serialized, decoded array
+    $rawnodes = unserialize($hg_reader_importer->serialize_xml($xml));
+    $hg_reader_importer->decode($rawnodes);
+
+    // create nodes
+    $node_count = 0;
+    foreach ($rawnodes as $rawnode) {
+      $created = $hg_reader_importer->create_node($rawnode, $iid);
+      if ($created) { $node_count++; }
+    }
+
+    // bubblegum, bubblgum in a dish, how many nodes did you import?
+    if ($this->messenger) {
+      $this->messenger->addMessage($this->t('@count nodes imported from <em>@importer_name</em>.',
+        array(
+          '@count' => $node_count,
+          '@importer_name' => $name,
+        )
+      ));
+    }
+
+    // Stamp the importer with the current time.
+    $hg_reader_importer->set('last_run', time());
+    $hg_reader_importer->save();
+  }
+
+  public function update_nodes(HgImporterInterface $hg_reader_importer) {
+    $name = $hg_reader_importer->get('name')->getString();
+    $last_run = $hg_reader_importer->get('last_run')->getString() ?: time();
+
+    $update_list = $hg_reader_importer->pull_updates($last_run);
+    $update_count = 0;
+    foreach ($update_list as $nid) {
+      if ($result = $hg_reader_importer->update_node($nid)) {
+        $update_count++;
+      }
+    }
+
+    if ($this->messenger && $update_count > 0) {
+      $this->messenger->addMessage($this->t('@count nodes updated from <em>@importer_name</em>.',
+        array(
+          '@count' => $update_count,
+          '@importer_name' => $name,
+        )
+      ));
+    }
+  }
+
+  public function log(NodeInterface $node = NULL) {
+    if (!$node) { return new JsonResponse(); }
+    if ($node->hasField('field_hg_id')) { $nid = $node->get('field_hg_id')->getString(); }
+    else if ($node->hasField('field_hg_id')) { $nid = $node->get('field_hg_id')->getString(); }
+    else { return new JsonResponse(); }
+
+    $this->database
+      ->insert('hg_reader_log')
+      ->fields([
+        'nid' => $nid,
+        'timestamp' => time()
+      ])
+      ->execute();
+
+    // Send back a nonce.
+    return new JsonResponse();
+  }
+}

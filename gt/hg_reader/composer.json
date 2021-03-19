@@ -1,0 +1,5 @@
+{
+    "name": "gt/hg_reader",
+    "description": "Provides the hg_reader module of course.",
+    "type": "drupal-module"
+}
