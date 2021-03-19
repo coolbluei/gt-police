@@ -1,7 +1,12 @@
+uuid: 66345ce4-a615-474a-bb1a-f0cd536581fd
+langcode: en
+status: true
+dependencies: {  }
 id: main_group
-label: Main Group
-description: Legacy content to be migrated to Drupal 8.
-source_type: Drupal 7
+label: 'Main Group'
+description: 'Legacy content to be migrated to Drupal 8.'
+source_type: 'Drupal 7'
+module: null
 shared_configuration:
   source:
     key: migrate

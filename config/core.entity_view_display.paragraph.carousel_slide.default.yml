@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.carousel_slide.field_image
+    - field.field.paragraph.carousel_slide.field_text
+    - field.field.paragraph.carousel_slide.field_title
     - paragraphs.paragraphs_type.carousel_slide
 id: paragraph.carousel_slide.default
 targetEntityType: paragraph
@@ -18,5 +20,20 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden: {  }

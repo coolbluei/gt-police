@@ -1,0 +1,29 @@
+uuid: c72c3cb4-e1df-40fe-b717-a6f2be64cf8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel.field_slides
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - paragraphs
+id: paragraph.carousel.default
+targetEntityType: paragraph
+bundle: carousel
+mode: default
+content:
+  field_slides:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

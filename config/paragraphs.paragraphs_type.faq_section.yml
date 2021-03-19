@@ -1,0 +1,10 @@
+uuid: 801e3d63-4488-4040-86d9-085175e1ec69
+langcode: en
+status: true
+dependencies: {  }
+id: faq_section
+label: 'FAQ Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

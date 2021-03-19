@@ -1,0 +1,53 @@
+uuid: 9b0c02f1-1996-4ac4-8336-d492d3982c94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.faq_section
+    - paragraphs.paragraphs_type.row
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      row: row
+      text: text
+      faq_section: faq_section
+    target_bundles_drag_drop:
+      carousel:
+        weight: 6
+        enabled: false
+      carousel_slide:
+        weight: 7
+        enabled: false
+      faq:
+        weight: 10
+        enabled: false
+      faq_section:
+        enabled: true
+        weight: 11
+      image_link:
+        weight: 8
+        enabled: false
+      row:
+        enabled: true
+        weight: 9
+      text:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions
