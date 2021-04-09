@@ -24,6 +24,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flexslider: 0
   gt_footerdaemon: 0
   gt_tools: 0
   help: 0
@@ -52,6 +53,7 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  safe_field_getter: 0
   search: 0
   shortcut: 0
   social_media_links: 0
@@ -78,6 +80,7 @@ theme:
   seven: 0
   gt: 0
   curie: 0
+  gt_subtheme: 0
 profile: gt_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

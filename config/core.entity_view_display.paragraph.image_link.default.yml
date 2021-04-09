@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.image_link.field_title
     - paragraphs.paragraphs_type.image_link
   module:
+    - field_formatter_class
     - link
 id: paragraph.image_link.default
 targetEntityType: paragraph
@@ -15,28 +16,33 @@ bundle: image_link
 mode: default
 content:
   field_image:
-    weight: 0
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+      view_mode: large
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
     region: content
   field_link:
     weight: 2
-    label: above
+    label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     type: link
     region: content
   field_title:
-    weight: 1
-    label: above
+    weight: 0
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

@@ -1,23 +1,30 @@
-uuid: 8fc78ecd-41cc-4e3d-9b29-58b4f2538b44
+uuid: e81b638c-1688-400b-98a0-74581a6f8c81
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.carousel
     - field.field.media.image.field_media_image
+    - image.style.flexslider_full
     - media.type.image
   module:
     - field_formatter_class
     - image
-id: media.image.default
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.carousel
 targetEntityType: media
 bundle: image
-mode: default
+mode: carousel
 content:
   field_media_image:
     label: hidden
     weight: 0
     settings:
-      image_style: ''
+      image_style: flexslider_full
       image_link: ''
     third_party_settings:
       field_formatter_class:
