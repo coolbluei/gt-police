@@ -1,9 +1,11 @@
 name: gtpd8
 recipe: drupal8
-config:
-  webroot: web
-  xdebug: true
 services:
+  appserver:
+    webroot: web
+    xdebug: true
+    config:
+      php: php.ini
   db2:
     type: mysql:5.7
     creds:

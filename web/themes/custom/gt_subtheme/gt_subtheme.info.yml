@@ -1,29 +1,34 @@
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8.7.7 || ^9
 type: theme
-base theme: gt
+base theme: curie
 
 name: 'GT Subtheme'
-description: 'GT Subtheme'
+description: 'All the features of Babbage plus templates for Layout Builder'
 package: 'GT'
 
 regions:
+  header: 'Header'
   navigation: 'Navigation'
-  navigation_collapsible: 'Navigation (Collapsible)'
-  top_navigation: 'Top Navigation'
-  header: 'Top Bar'
+  utility_navigation: 'Utility Navigation'
+  search: 'Search'
+  banner: 'Banner'
   highlighted: 'Highlighted'
   help: 'Help'
+  breadcrumbs: 'Page Title / Breadcrumbs'
+  before_content: 'Before Content'
+  full_width_before_content: 'Full Width Before Content'
   content: 'Content'
-  sidebar_first: 'Primary'
-  sidebar_second: 'Secondary'
-  superfooter_1: 'Superfooter (Column 1)'
-  superfooter_2: 'Superfooter (Column 2)'
-  superfooter_3: 'Superfooter (Column 3)'
-  superfooter_4: 'Superfooter (Column 4)'
-  footer: 'Footer'
-  footer_right: 'Footer Right'
+  full_width_after_content: 'Full Width After Content'
+  after_content: 'After Content'
+  full_width_content: 'After Full Width Content / with border'
+  full_width_content_two: 'After Full Width Content / without border'
+  sidebar_first: 'Sidebar Left'
+  sidebar_second: 'Sidebar Right'
+  before_footer: 'Footer Top / Must be utilized with the Superfooter Option'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_four: 'Footer Fourth'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-
-libraries:
-  - 'gt/global-styling'
+  other: 'Other / Placeholder Region'

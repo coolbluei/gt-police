@@ -1,0 +1,7 @@
+.carousel .slides .paragraph--type--carousel-slide {
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+}
