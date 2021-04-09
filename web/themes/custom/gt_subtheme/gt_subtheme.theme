@@ -19,8 +19,10 @@ function gt_subtheme_preprocess_page(&$variables) {
     if($node instanceof NodeInterface) {
         if($node->hasField('field_carousel')) {
             $carousel = SafeFieldGetter::firstReference($node, 'field_carousel');
-            $rendered_carousel = \Drupal::entityTypeManager()->getViewBuilder('paragraph')->view($carousel);
-            $variables['carousel'] = $rendered_carousel;
+            if($carousel) {
+                $rendered_carousel = \Drupal::entityTypeManager()->getViewBuilder('paragraph')->view($carousel);
+                $variables['carousel'] = $rendered_carousel;
+            }
         }
 
         if($node->hasField('field_hide_title')) {
