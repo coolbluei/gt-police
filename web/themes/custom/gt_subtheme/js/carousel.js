@@ -6,7 +6,8 @@
     Drupal.behaviors.slidesBehavior = {
       attach: function (context, settings) {
         $('.field--name-field-slides').flexslider({
-            animation: "slide"
+            animation: "slide",
+            directionNav: true
           });
       }
     };
