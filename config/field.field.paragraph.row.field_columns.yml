@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_link
     - paragraphs.paragraphs_type.row
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_link
   module:
     - entity_reference_revisions
 id: paragraph.row.field_columns
@@ -25,6 +26,7 @@ settings:
     negate: 0
     target_bundles:
       image_link: image_link
+      text_link: text_link
       text: text
     target_bundles_drag_drop:
       carousel:
@@ -32,6 +34,12 @@ settings:
         enabled: false
       carousel_slide:
         weight: 7
+        enabled: false
+      faq:
+        weight: 12
+        enabled: false
+      faq_section:
+        weight: 13
         enabled: false
       image_link:
         enabled: true
@@ -42,4 +50,7 @@ settings:
       text:
         enabled: true
         weight: 10
+      text_link:
+        enabled: true
+        weight: 9
 field_type: entity_reference_revisions
