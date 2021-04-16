@@ -11,3 +11,8 @@ row:
   css:
     base:
       css/row.css: {}
+
+social:
+  css:
+    base:
+      css/social.css: {}
