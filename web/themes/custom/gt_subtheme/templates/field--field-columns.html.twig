@@ -42,6 +42,6 @@
 
 <div class="field field--name-field-columns row field__items">
     {% for item in items %}
-        <div{{ item.attributes.addClass('col') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('col-md', 'col-sm-12') }}>{{ item.content }}</div>
     {% endfor %}
 </div>
