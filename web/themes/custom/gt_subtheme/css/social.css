@@ -16,6 +16,7 @@
     width: 30px;
     margin: 5px;
     overflow: hidden;
+    font-weight: inherit;
 }
 
 
