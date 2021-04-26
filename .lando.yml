@@ -1,4 +1,4 @@
-name: gtpd8
+name: oepd8
 recipe: drupal8
 services:
   appserver:
@@ -6,6 +6,10 @@ services:
     xdebug: true
     config:
       php: php.ini
+    build_as_root:
+      - apt-get update -y
+      - apt install libxslt1-dev -y
+      - docker-php-ext-install xsl
   db2:
     type: mysql:5.7
     creds:
