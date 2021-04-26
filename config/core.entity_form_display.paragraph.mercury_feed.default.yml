@@ -1,0 +1,23 @@
+uuid: 1d49c61f-4eca-4163-8966-bfdb375ed5b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mercury_feed.field_title
+    - paragraphs.paragraphs_type.mercury_feed
+id: paragraph.mercury_feed.default
+targetEntityType: paragraph
+bundle: mercury_feed
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

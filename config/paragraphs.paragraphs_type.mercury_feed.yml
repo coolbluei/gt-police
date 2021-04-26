@@ -1,0 +1,10 @@
+uuid: a2b3d127-cd49-4847-86d6-5c563c20d456
+langcode: en
+status: true
+dependencies: {  }
+id: mercury_feed
+label: 'Mercury Feed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
