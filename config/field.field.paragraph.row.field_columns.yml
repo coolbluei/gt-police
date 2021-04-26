@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.storage.paragraph.field_columns
     - paragraphs.paragraphs_type.image_link
+    - paragraphs.paragraphs_type.mercury_feed
     - paragraphs.paragraphs_type.row
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_link
+    - paragraphs.paragraphs_type.twitter_feed
   module:
     - entity_reference_revisions
 id: paragraph.row.field_columns
@@ -28,6 +30,8 @@ settings:
       image_link: image_link
       text_link: text_link
       text: text
+      mercury_feed: mercury_feed
+      twitter_feed: twitter_feed
     target_bundles_drag_drop:
       carousel:
         weight: 6
@@ -44,6 +48,9 @@ settings:
       image_link:
         enabled: true
         weight: 8
+      mercury_feed:
+        enabled: true
+        weight: 16
       row:
         weight: 9
         enabled: false
@@ -53,4 +60,7 @@ settings:
       text_link:
         enabled: true
         weight: 9
+      twitter_feed:
+        enabled: true
+        weight: 18
 field_type: entity_reference_revisions

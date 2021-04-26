@@ -1,0 +1,23 @@
+uuid: ced6bd99-08f4-46eb-8267-236d55f1a481
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter_feed.field_twitter_id
+    - paragraphs.paragraphs_type.twitter_feed
+id: paragraph.twitter_feed.default
+targetEntityType: paragraph
+bundle: twitter_feed
+mode: default
+content:
+  field_twitter_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

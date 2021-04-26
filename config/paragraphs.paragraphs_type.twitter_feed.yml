@@ -1,0 +1,10 @@
+uuid: 0af25cba-b265-43bb-bf65-d8bd5a099049
+langcode: en
+status: true
+dependencies: {  }
+id: twitter_feed
+label: 'Twitter Feed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
