@@ -45,3 +45,41 @@ function gt_subtheme_preprocess_paragraph__carousel_slide(&$variables) {
     $url = $style->buildUrl($file_uri);
     $variables['image_url'] = $url;
 }
+
+function gt_subtheme_preprocess_paragraph__twitter_feed(&$variables) {
+    $paragraph = $variables['paragraph'];
+
+    $variables['twitter_id'] = SafeFieldGetter::firstSimple($paragraph, 'field_twitter_id');
+}
+
+function gt_subtheme_preprocess_paragraph__mercury_feed(&$variables) {
+    $paragraph = $variables['paragraph'];
+
+    $variables['title'] = SafeFieldGetter::firstSimple($paragraph, 'field_title');
+
+    $variables['feed'] = views_embed_view('mercury_news_and_events', 'embed_1');
+}
+
+function gt_subtheme_preprocess_node__hg_news(&$variables) {
+    $node = $variables['node'];
+
+    $meta = SafeFieldGetter::firstComplex($node, 'field_hg_images');
+    $file = SafeFieldGetter::firstReference($node, 'field_hg_images');
+
+    if(!empty($file)) {
+        $variables['image'] = [
+            '#theme' => 'image_style',
+            '#style_name' => 'medium',
+            '#uri' => $file->getFileUri(),
+            '#alt' => $meta['alt'],
+            '#attributes' => [ 
+                'class' => [
+                    'float-left',
+                    'mr-3',
+                    'mt-0',
+                    'mb-0' 
+                ],
+            ],
+        ];
+    }
+}

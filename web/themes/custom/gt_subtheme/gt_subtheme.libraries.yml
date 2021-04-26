@@ -16,3 +16,8 @@ social:
   css:
     base:
       css/social.css: {}
+
+mercury:
+  css:
+    base:
+      css/mercury.css: {}
