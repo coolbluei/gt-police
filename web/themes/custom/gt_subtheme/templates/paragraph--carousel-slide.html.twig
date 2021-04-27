@@ -54,9 +54,11 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes).setAttribute('style', styles) }}>
     {% block content %}
-      <div class="slide-text">
-        {{ content }}
-      </div>
+      {% if content|render %}
+        <div class="slide-text">
+          {{ content }}
+        </div>
+      {% endif %}
     {% endblock %}
   </div>
 {% endblock paragraph %}
