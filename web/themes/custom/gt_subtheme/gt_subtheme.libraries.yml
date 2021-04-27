@@ -21,3 +21,10 @@ mercury:
   css:
     base:
       css/mercury.css: {}
+
+accordion:
+  js:
+    js/accordion.js: {}
+  dependencies:
+    - curie/gt-accordion
+    - core/jquery.ui.accordion

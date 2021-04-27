@@ -83,3 +83,16 @@ function gt_subtheme_preprocess_node__hg_news(&$variables) {
         ];
     }
 }
+
+function gt_subtheme_preprocess_paragraph__faq(&$variables) {
+    $paragraph = $variables['paragraph'];
+
+    $variables['question'] = SafeFieldGetter::firstSimple($paragraph, 'field_question');
+    $answer = SafeFieldGetter::firstComplex($paragraph, 'field_body');
+    
+    $variables['answer'] = [
+        '#type' => 'processed_text',
+        '#text' => $answer['value'],
+        '#format' => $answer['format'],
+    ];
+}
