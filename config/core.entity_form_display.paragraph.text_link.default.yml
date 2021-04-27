@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.text_link.field_title
     - paragraphs.paragraphs_type.text_link
   module:
-    - link
+    - link_target
     - text
 id: paragraph.text_link.default
 targetEntityType: paragraph
@@ -28,8 +28,9 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      link_target: ''
     third_party_settings: {  }
-    type: link_default
+    type: link_target_field_widget
     region: content
   field_title:
     weight: 0
