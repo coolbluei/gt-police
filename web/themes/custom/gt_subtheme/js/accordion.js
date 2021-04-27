@@ -6,7 +6,8 @@
     Drupal.behaviors.accordion = {
       attach: function (context, settings) {
         $('.accordion').accordion({
-            collapsible: true
+            collapsible: true,
+            heightStyle: "content"
           });
       }
     };
