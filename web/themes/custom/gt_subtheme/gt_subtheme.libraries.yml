@@ -16,6 +16,8 @@ social:
   css:
     base:
       css/social.css: {}
+  dependencies:
+    - gt_subtheme/icons
 
 mercury:
   css:
@@ -28,3 +30,7 @@ accordion:
   dependencies:
     - curie/gt-accordion
     - core/jquery.ui.accordion
+
+icons:
+  js:
+    https://kit.fontawesome.com/757ff469de.js: { type: external }

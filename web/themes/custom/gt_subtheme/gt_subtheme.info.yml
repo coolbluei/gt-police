@@ -32,3 +32,9 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   other: 'Other / Placeholder Region'
+
+libraries-override:
+  curie/fonts:
+    css:
+      theme:
+        //stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: false
