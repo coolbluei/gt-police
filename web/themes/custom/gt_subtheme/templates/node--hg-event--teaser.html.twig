@@ -76,6 +76,11 @@
     {# Main Content  #}
     <div class="col-md-8 col-sm-12">
 
+        {# Title #}
+        <div class="hg-title">
+            {{ label }}
+        </div>
+
         {# Images #}
         {% if content.field_hg_images|render is not empty %}
             <picture>
