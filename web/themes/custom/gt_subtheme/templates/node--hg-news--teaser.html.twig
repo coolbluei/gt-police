@@ -34,9 +34,12 @@
     {% endif %}
 
     {# Summary Sentence #}
-    {% if node.field_hg_summary_sentence.value is not empty %}
+    {% if node.field_hg_summary_sentence.value is not empty or node.body.summary is not empty %}
       <div class="summary-sentence">
         {{ node.field_hg_summary_sentence.value }}
+      </div>
+      <div class="summary">
+        {{ node.body.summary }}
       </div>
     {% elseif node.field_hg_summary.value is not empty %}
       <div class="summary">
