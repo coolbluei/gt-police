@@ -78,7 +78,7 @@
 
         {# Title #}
         <div class="hg-title">
-            {{ label }}
+            <a href="{{ path('entity.node.canonical', {'node': node.id}) }}"><h2>{{ node.title.value }}</h2></a>
         </div>
 
         {# Images #}
