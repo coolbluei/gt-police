@@ -23,21 +23,13 @@ class CsaController extends ControllerBase {
     *   Return page content.
     */
   public function content() {
-    $content = $this->getContent();
-
     return [
-      '#type' => 'markup',
-      '#markup' => $content,
-      '#cache' => [
-        'max-age' => 0,
-      ],
-    ];
-  }
-
-  private function getContent() {
-    $urlprefix = "http://reports.police.gatech.edu/public/viewcsa.asp";
-
-    return readfile($urlprefix);
-  }
+        '#type' => 'inline_template',
+        '#template' => '<iframe src="https://www.police.gatech.edu/csa.php" height="100%" width="100%" style="width:100%; height:1000px; border:none;"></iframe>',
+        '#cache' => [
+            'max-age' => 0,
+        ],
+      ];
+    }
   
 }
