@@ -1,0 +1,19 @@
+uuid: d61990e5-9473-4d11-a500-099c247e0265
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: 'No HTML Tag Limits'
+format: no_html_tag_limits
+weight: 0
+filters:
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

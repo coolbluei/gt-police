@@ -1,0 +1,23 @@
+crime_logs.crimelog:
+  path: '/crimelogs'
+  defaults:
+    _controller: 'Drupal\crime_logs\Controller\CrimeLogsController::content'
+    _title: 'Crime Logs'
+  requirements:
+    _permission: 'access content'
+
+crime_logs.noncrimelog:
+  path: '/noncrimelogs'
+  defaults:
+    _controller: 'Drupal\crime_logs\Controller\NonCrimeLogsController::content'
+    _title: 'Non Crime Logs'
+  requirements:
+    _permission: 'access content'
+
+crime_logs.csa:
+  path: '/csa'
+  defaults:
+    _controller: 'Drupal\crime_logs\Controller\CsaController::content'
+    _title: 'Campus Security Authority Logs'
+  requirements:
+    _permission: 'access content'

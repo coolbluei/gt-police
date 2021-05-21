@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains crime_logs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function crime_logs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the crime_logs module.
+    case 'help.page.crime_logs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides Crime Log routes and controllers') . '</p>';
+      return $output;
+
+    default:
+  }
+}
