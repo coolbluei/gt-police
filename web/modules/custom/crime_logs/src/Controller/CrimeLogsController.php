@@ -25,7 +25,7 @@ class CrimeLogsController extends ControllerBase {
   public function content() {
     return [
       '#type' => 'inline_template',
-      '#template' => '<iframe src="http://www.police.gatech.edu/crimelog.php" height="100%" width="100%" style="width:100%; height:1000px; border:none;"></iframe>',
+      '#template' => '<iframe src="https://www.police.gatech.edu/crimelog.php" height="100%" width="100%" style="width:100%; height:1000px; border:none;"></iframe>',
       '#cache' => [
           'max-age' => 0,
       ],
