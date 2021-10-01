@@ -1,18 +1,22 @@
-name: oepd8
+name: gtpolice
 recipe: drupal8
+config:
+  php: '7.4'
+  via: 'nginx'
+  webroot: './web'
+  database: 'mysql:5.7'
+  composer_version: '1.10.1'
+  xdebug: true
+  config:
+    php: lando.php.ini
 services:
   appserver:
-    webroot: web
-    xdebug: true
-    config:
-      php: php.ini
     build_as_root:
       - apt-get update -y
       - apt install libxslt1-dev -y
       - docker-php-ext-install xsl
-  db2:
-    type: mysql:5.7
-    creds:
-      user: drupal7
-      password: drupal7
-      database: drupal7
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: "https://gtpolice.lndo.site"
+  pma:
+    type: phpmyadmin

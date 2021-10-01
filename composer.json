@@ -69,6 +69,7 @@
     "drupal/pathauto": "^1.8",
     "drupal/redirect": "^1.6",
     "drupal/social_media_links": "^2.7",
+    "drupal/stage_file_proxy": "^1.1",
     "drupal/upgrade_status": "^3.11",
     "drupal/video_embed_field": "^2.4",
     "drush/drush": "^10.0",
