@@ -17,7 +17,7 @@
     },
     {
       "type": "path",
-      "url": "gt/gt_profile_curie"
+      "url": "gt/gt_profile"
     },
     {
       "type": "path",
@@ -73,7 +73,7 @@
     "drupal/upgrade_status": "^3.11",
     "drupal/video_embed_field": "^2.4",
     "drush/drush": "^10.0",
-    "gt/gt_profile_curie": "*",
+    "gt/gt_profile": "*",
     "gt/gt_theme": "*",
     "gt/gt_tools": "*",
     "gt/hg_reader": "*",

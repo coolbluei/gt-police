@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06edef0cd973fe69248ce4c939753164",
+    "content-hash": "8bc68015876b6979bee7fd165c09ba51",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4023,15 +4023,15 @@
             "time": "2017-12-16T16:06:03+00:00"
         },
         {
-            "name": "gt/gt_profile_curie",
-            "version": "dev-master",
+            "name": "gt/gt_profile",
+            "version": "dev-testing/drupal-9-migration",
             "dist": {
                 "type": "path",
-                "url": "gt/gt_profile_curie",
-                "reference": "6171b6a4f571401df580582af8602e052aa77d92"
+                "url": "gt/gt_profile",
+                "reference": "4b7ce9a64fee475cd4b83514b9cfdb54cac10a90"
             },
             "type": "drupal-profile",
-            "description": "Install profile for Curie design package"
+            "description": "GT install profile 3.x"
         },
         {
             "name": "gt/gt_theme",
