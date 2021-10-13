@@ -1,0 +1,20 @@
+uuid: 8e50c00e-f92b-4b83-93a2-f18261f2bbd0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - trans_curie
+_core:
+  default_config_hash: kguB3mycdRz0uccHIygGG7fqL7KZz0tzFnsx78s-6do
+id: trans_curie_local_actions
+theme: trans_curie
+region: utility_navigation
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

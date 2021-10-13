@@ -1,0 +1,22 @@
+uuid: 255f4398-1d1b-487f-9e7c-7bbd0738f3b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - trans_curie
+_core:
+  default_config_hash: ud6UEfIf9lp1r2TfsSktD6_MJ4OjMa12x03DSyuDfc8
+id: trans_curie_help
+theme: trans_curie
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

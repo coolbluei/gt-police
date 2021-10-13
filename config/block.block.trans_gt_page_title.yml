@@ -1,0 +1,20 @@
+uuid: 7fac1ab7-44ba-499e-a75f-c699a0fa126a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - trans_gt
+_core:
+  default_config_hash: KxSCzHiJMhHEMdgjOohPlRqpEYkhppMBxgjYcxZvx3A
+id: trans_gt_page_title
+theme: trans_gt
+region: navigation
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

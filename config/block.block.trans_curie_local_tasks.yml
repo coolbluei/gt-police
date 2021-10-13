@@ -1,0 +1,22 @@
+uuid: 78154683-512c-4757-a434-988af4b045cc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - trans_curie
+_core:
+  default_config_hash: AuC6-nPVhpnjvg5r1QrVG2pnBfudOfTOH5SIVVTxMCg
+id: trans_curie_local_tasks
+theme: trans_curie
+region: help
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

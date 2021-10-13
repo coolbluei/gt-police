@@ -1,13 +1,13 @@
-uuid: ae73db65-952e-4f0c-b346-a957b9e0461e
+uuid: 9347adb8-95b1-494f-bf31-eec1b4aa5fb6
 langcode: en
 status: true
 dependencies:
   theme:
-    - gt_subtheme
+    - trans_curie
 _core:
   default_config_hash: 1e6cA1DngrtddMBko_PbFhU7HjbDvC3t-uI0JrBwDHA
-id: gt_subtheme_gtfootermenu3
-theme: gt_subtheme
+id: trans_curie_gtfootermenu3
+theme: trans_curie
 region: footer_four
 weight: 0
 provider: null

@@ -1,14 +1,14 @@
-uuid: 5b55ebc5-f108-468d-9b70-4d7c4719ccae
+uuid: 6540f007-e082-4c8d-ba30-34c79998712f
 langcode: en
 status: true
 dependencies:
   theme:
-    - gt_subtheme
+    - trans_gt
 _core:
   default_config_hash: GxzjF5RKV34nubQaVFPEXDs2Xr2WLA5aXEkaZy5KyLw
-id: gt_subtheme_gtfootermenu0
-theme: gt_subtheme
-region: footer_first
+id: trans_gt_gtfootermenu0
+theme: trans_gt
+region: navigation
 weight: -10
 provider: null
 plugin: 'system_menu_block:gt_footer_menu_0'
