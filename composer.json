@@ -113,9 +113,5 @@
         }
       }
     }
-  },
-  "require-dev": {
-    "drupal/stage_file_proxy": "^1.1",
-    "drupal/upgrade_status": "^3.11"
   }
 }

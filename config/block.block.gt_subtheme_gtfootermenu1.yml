@@ -2,10 +2,6 @@ uuid: 776af033-9372-47b5-b9a8-89d3e7b8f935
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.gt_footer_menu_1
-  module:
-    - system
   theme:
     - gt_subtheme
 _core:
