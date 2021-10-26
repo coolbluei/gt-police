@@ -1,6 +1,6 @@
 uuid: 3121934b-afbe-42db-8be9-efd23391d1f5
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.gt-footer-legal
@@ -10,7 +10,7 @@ dependencies:
     - gt
 id: gt_footer_legal
 theme: gt
-region: footer_07
+region: navigation
 weight: 0
 provider: null
 plugin: 'system_menu_block:gt-footer-legal'

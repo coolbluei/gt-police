@@ -1,6 +1,6 @@
 uuid: 00190fd1-3109-4aad-acc6-846965c21a25
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.gt-footer-02
@@ -10,7 +10,7 @@ dependencies:
     - gt
 id: gt_footer_02
 theme: gt
-region: footer_02
+region: navigation
 weight: 0
 provider: null
 plugin: 'system_menu_block:gt-footer-02'

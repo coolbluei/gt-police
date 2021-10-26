@@ -24,6 +24,27 @@ third_party_settings:
           label: ''
           context_mapping: {  }
         components:
+          d1a5d2de-74ee-4d55-913b-c51200a27730:
+            uuid: d1a5d2de-74ee-4d55-913b-c51200a27730
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_carousel'
+              label: Carousel
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
           b4043fa8-998e-47fb-adc6-70e06bb949de:
             uuid: b4043fa8-998e-47fb-adc6-70e06bb949de
             region: content
@@ -42,24 +63,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
-          d1a5d2de-74ee-4d55-913b-c51200a27730:
-            uuid: d1a5d2de-74ee-4d55-913b-c51200a27730
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:page:field_carousel'
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
-            additional: {  }
-            weight: 2
+            weight: 4
         third_party_settings: {  }
   layout_builder_restrictions:
     entity_view_mode_restriction:
@@ -79,6 +83,10 @@ third_party_settings:
         'User fields': {  }
         core: {  }
       allowed_layouts: {  }
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      restricted_categories: {  }
+    allowed_block_categories: {  }
 id: node.page.default
 targetEntityType: node
 bundle: page
