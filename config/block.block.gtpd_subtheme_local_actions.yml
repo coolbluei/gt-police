@@ -1,0 +1,20 @@
+uuid: 816dd51c-5d28-46b3-a1be-86d5b6d25d33
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gtpd_subtheme
+_core:
+  default_config_hash: kguB3mycdRz0uccHIygGG7fqL7KZz0tzFnsx78s-6do
+id: gtpd_subtheme_local_actions
+theme: gtpd_subtheme
+region: utility_navigation
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

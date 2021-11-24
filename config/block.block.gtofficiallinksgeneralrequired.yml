@@ -1,0 +1,25 @@
+uuid: 1168b5ef-f247-4f9f-998e-a792f53e7268
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.gt-footer-general
+  module:
+    - system
+  theme:
+    - gtpd_subtheme
+id: gtofficiallinksgeneralrequired
+theme: gtpd_subtheme
+region: footer_06
+weight: -6
+provider: null
+plugin: 'system_menu_block:gt-footer-general'
+settings:
+  id: 'system_menu_block:gt-footer-general'
+  label: 'GT official links: general (required)'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

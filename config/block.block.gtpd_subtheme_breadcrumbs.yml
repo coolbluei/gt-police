@@ -1,0 +1,22 @@
+uuid: 34534669-e639-4a69-8cf3-879d3057981d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gtpd_subtheme
+_core:
+  default_config_hash: ouT9JUpTxacX0Z3swXP42FXYTUQotuqXubEof9EAk9s
+id: gtpd_subtheme_breadcrumbs
+theme: gtpd_subtheme
+region: breadcrumbs
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

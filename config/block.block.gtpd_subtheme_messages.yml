@@ -1,0 +1,22 @@
+uuid: c89c7550-74a2-4b0e-9d9b-3384f95c6eb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gtpd_subtheme
+_core:
+  default_config_hash: Br18pqVyVuDxUzX-kHToeY84BOP4QMbQqv_M3oqmd1E
+id: gtpd_subtheme_messages
+theme: gtpd_subtheme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

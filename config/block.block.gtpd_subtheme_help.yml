@@ -1,0 +1,22 @@
+uuid: 5b764b47-00cd-45a0-bd86-f3c7dddbd6a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gtpd_subtheme
+_core:
+  default_config_hash: ud6UEfIf9lp1r2TfsSktD6_MJ4OjMa12x03DSyuDfc8
+id: gtpd_subtheme_help
+theme: gtpd_subtheme
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
