@@ -37,3 +37,7 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   other: 'Other / Placeholder Region'
+
+libraries-extend:
+  gt/global-styling:
+    - gtpd_subtheme/global

@@ -1,3 +1,8 @@
+global:
+  css:
+    theme:
+      css/global_extend.css: {}
+
 carousel:
   js:
     js/carousel.js: {}
