@@ -9,7 +9,6 @@ dependencies:
   - block
   - breakpoint
   - ckeditor
-  - color
   - comment
   - config
   - contextual
@@ -30,7 +29,6 @@ dependencies:
   - dynamic_page_cache
   - taxonomy
   - dblog
-  - search
   - shortcut
   - toolbar
   - field_ui
@@ -45,6 +43,6 @@ dependencies:
 themes:
   - gt
   - seven
-version: '3.0.0'
+version: '3.0.6'
 project status url: http://repo.drupal.gatech.edu/release_history/gt_profile/3.x
 core_version_requirement: ^8.8 || ^9

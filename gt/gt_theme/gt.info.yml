@@ -3,6 +3,10 @@ name: 'GT'
 type: theme
 description: 'GT Bootstrap 4 theme for Drupal 9.'
 core_version_requirement: ^8.8 || ^9
+package: GT
+project: 'gt_theme'
+project status url: https://repo.drupal.gatech.edu/release_history/gt_theme/3.x
+version: '3.0.7'
 base theme: stable
 
 regions:
@@ -41,3 +45,4 @@ libraries:
   - 'gt/global-styling'
   - 'gt/fonts'
   - 'gt/bootstrap_cdn'
+  - 'gt/gt-webform'

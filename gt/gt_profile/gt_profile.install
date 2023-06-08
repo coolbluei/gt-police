@@ -132,6 +132,11 @@ function gt_profile_install() {
     \Drupal::service('module_installer')->install(['social_media_links']);
   }
 
+   // Install Metatag
+  if (file_exists(DRUPAL_ROOT . '/modules/contrib/metatag/metatag.module')) {
+    \Drupal::service('module_installer')->install(['metatag','metatag_open_graph','metatag_twitter_cards']);
+  }
+
   /**
    * Install a bunch of configs that rely on the above modules.
    */

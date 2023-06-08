@@ -1,4 +1,4 @@
-gt/**** GT General ****/
+/**** GT General ****/
 html,
 body {
   overflow-x: hidden;
@@ -73,16 +73,10 @@ a:active {
 }
 
 .main-container a,
-.main-container a:link {
-  text-decoration: underline;
-  text-decoration-color: var(--gt-black);
-  transition: all .3s ease-in-out;
-  word-wrap: break-word;
-}
-
+.main-container a:link,
 .main-container a:visited {
   text-decoration: underline;
-  text-decoration-color: var(--gt-gold);
+  text-decoration-color: var(--gt-black);
   transition: all .3s ease-in-out;
   word-wrap: break-word;
 }
@@ -90,7 +84,8 @@ a:active {
 .main-container a:hover,
 .main-container a:focus,
 .main-container a:active {
-  background: var(--gt-gold);
+  color: var(--gt-drk-gold);
+  text-decoration: underline;
 }
 
 /* DO NOT MODIFY FOR ACCESSIBILITY REASON */
@@ -308,14 +303,6 @@ h6, .h6 {
 .main-container .gt-main-content ul:not(.nav),
 .main-container .gt-main-content ol:not(.nav) {
   margin-bottom: 1.3rem;
-}
-
-.main-container .gt-main-content ul:not(.nav) {
-  list-style-type: square;
-}
-
-.main-container .gt-main-content ul:not(.nav) ul {
-  list-style-type: disc;
 }
 
 .main-container .gt-main-content li::marker {
@@ -551,7 +538,7 @@ h6, .h6 {
 a.feed-icon {
   border-bottom: none !important;
   color: var(--gt-black) !important;
-  font-family: var(--font-abel);
+  font-family: var(--font-roboto-condensed);
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -595,7 +582,7 @@ a.banner-link {
 /* Table CSS */
 table {
   border: 1px solid transparent;
-  font-family: var(--font-abel);
+  font-family: var(--font-roboto-condensed);
   font-size: 1rem;
   line-height: 1.2;
   margin: 10px 0 20px 0;
@@ -930,36 +917,6 @@ blockquote p::after {
   border-color: var(--gt-warm-gray) !important;
 }
 
-/* Timeline */
-.timeline-decade {
-  font-size: 4rem;
-  color: var(--gt-gold);
-}
-
-.timeline-year {
-  font-size: 3rem;
-  color: var(--gt-black);
-}
-
-.timeline-title {
-  font-size: 2rem;
-  color: var(--gt-black);
-}
-
-.timeline-body {
-  font-size: 1rem;
-}
-
-.fa.fa-pencil {
-  color: green;
-  margin: 1rem 0;
-  font-size: 25px;
-}
-
-.timeline-wrapper {
-  margin-bottom: 5rem;
-}
-
 /* Negative Gutters */
 .negative-gutters {
   margin-right: -15px;
@@ -1075,4 +1032,72 @@ section {
 .main-container a:hover, .main-container a:focus, .main-container a:active {
   background: none;
   text-decoration: underline !important;
+}
+
+/* Visual styling for the Password strength indicator */
+.password-strength__meter {
+  margin-top: 0.5em;
+  background-color: var(--gt-warm-gray);
+}
+
+.password-strength__indicator {
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  background-color: var(--gt-success);
+}
+
+.password-strength__indicator.is-weak {
+  background-color: var(--gt-warning);
+}
+
+.password-strength__indicator.is-fair {
+  background-color: var(--gt-danger);
+}
+
+.password-strength__indicator.is-good {
+  background-color: var(--gt-info);
+}
+
+.password-strength__indicator.is-strong {
+  background-color: var(--gt-success);
+}
+
+.main-container a.page-link {
+  text-decoration: none !important;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: var(--gt-white);
+  background-color: var(--gt-drk-gold);
+  border-color: var(--gt-drk-gold);
+  text-decoration: none;
+}
+
+.main-container a.page-link:hover {
+  text-decoration: none !important;
+  color: var(--gt-white);
+  background-color: var(--gt-drk-gold);
+  border-color: var(--gt-drk-gold);
+}
+
+.node-preview-container {
+  position: relative !important;
+  text-align: center !important;
+  background: var(--gt-navy) !important;
+  color: white !important;
+}
+
+.node.node--type-article.node--promoted.node--unpublished,
+.node.node--type-page.node--unpublished,
+.node--unpublished {
+  background: #ffc0cb6e;
+}
+
+@media screen and (min-width: 40em) {
+  .layout--threecol-section--33-34-33 > .layout__region--first,
+  .layout--threecol-section--33-34-33 > .layout__region--second,
+  .layout--threecol-section--33-34-33 > .layout__region--third {
+    flex: 0 1 33.3%;
+  }
 }

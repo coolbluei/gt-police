@@ -103,8 +103,8 @@ img.original {
 }
 
 .gt-white img {
-	position: relative;
-	z-index: 99;
+  position: relative;
+  z-index: 99;
 }
 
 .gt-white .card-body h2,
@@ -201,6 +201,17 @@ img.original {
   background-color: var(--gt-gold) !important;
 }
 
+.btn-gold {
+  background: var(--gt-gold);
+  padding: .5rem 1rem;
+  text-decoration: none !important;
+}
+
+.btn-gold:hover {
+  background: var(--gt-blue-hover) !important;
+  color: var(--gt-white) !important;
+}
+
 .gt-text-gold h2,
 .gt-text-gold h3,
 .gt-text-gold h4,
@@ -278,7 +289,7 @@ img.original {
 
 /* transparent */
 #superblock .gt-transparent .card-body {
-	padding: 0;
+  padding: 0;
 }
 
 .gt-transparent .card-body h2,
@@ -291,8 +302,8 @@ img.original {
 
 /* banner region specific styling */
 #gt-banner #superblock .gt-transparent .card-body {
-	padding-right: 15px;
-	padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 
@@ -311,6 +322,6 @@ img.original {
   color: var(--gt-black) !important;
 }
 
-.gt-blue .card-body.gt-text-blue{
+.gt-blue .card-body.gt-text-blue {
   color: #fff !important;
 }

@@ -1,5 +1,4 @@
 /* SEARCH */
-
 #search-container input {
   background-color: var(--gt-white);
   border: 1px solid var(--gt-light-grey);
@@ -71,8 +70,9 @@
   color: var(--gt-dark-grey);
   font-size: .85rem;
   height: inherit;
-  padding: .25rem;
+  padding: .2rem;
   width: auto;
+  border: 1px solid var(--gt-light-grey);
 }
 
 /* Search Container and label */
@@ -143,6 +143,7 @@
   line-height: 1.2;
   text-decoration: none;
 }
+
 /* Search Form */
 .search-form {
   font-size: .9rem;
@@ -208,6 +209,7 @@
   margin-top: 0;
   margin-bottom: 1em;
 }
+
 /*********  RESPONSIVENESS ********/
 
 @media (max-width: 990px) {
@@ -323,6 +325,7 @@
     left: 0;
     top: 0;
   }
+
   #search-block-form [type="search"] {
     height: 40px;
     min-width: 250px;

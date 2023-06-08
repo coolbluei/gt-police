@@ -4,12 +4,10 @@
         {{ page.alert }}
     {% endblock %}
 {% endif %}
-
 {# Header #}
 <header id="gt-header" role="banner">
-    <a href="#main-navigation" id="page-navigation" class="sr-only">Skip To Keyboard Navigation</a>
+    <a href="#main-navigation" id="skip-to-navigation" class="sr-only">{{ 'Skip To Keyboard Navigation'|t }}</a>
     <div class="bg-gold-md-gold position-relative" id="brandhead">
-
         {# GT Hambuger #}
         <div id="mobile-menu-wrapper" class="d-block d-md-none container">
             <button class="d-block ml-auto navbar-toggler collapsed" type="button" data-toggle="collapse"
@@ -19,10 +17,9 @@
                 <span class="icon-bar middle-bar"></span>
                 <span class="icon-bar bottom-bar mb-1"></span>
                 <span class="icon-text"></span>
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
             </button>
         </div>
-
         {# Top Header #}
         <div class="container">
             <div class="row">
@@ -30,17 +27,15 @@
                     <div id="gt-logo">
                         <a class="d-flex align-items-center" href="https://gatech.edu" title="Georgia Tech">
                             <img id="gt-logo-image" src="{{ gt_path }}gt-logo-oneline-white.svg"
-                                 alt="{{ 'Georgia Tech'|t }} | {{ site_name }}"/>
+                                 alt="{{ 'Georgia Tech'|t }} | {{ site_name }}" width="244.48px" height="42px"/>
                         </a>
                     </div><!--end gt-logo-->
                 </div>
-
                 <div class="col bg-gold-grad">
                 </div>
             </div><!--end row -->
         </div><!--end container-->
     </div><!--end gold bg -->
-
     <div class="container">
         <div class="row">
             <div class="col" id="site-name-slogan-wrapper">
@@ -55,14 +50,10 @@
             </div><!--END col-->
         </div><!--end row -->
     </div><!--end container-->
-
-
     {# Bottom Header #}
-
     <div class="container">
         <div class="navbar-expand-md">
             <div id="bottom-header" class="py-1 mb-2">
-
                 <nav id="Navbar" class="collapse navbar navbar-collapse">
                     <div class="d-md-flex w-100">
                         {# Page Navigation #}
@@ -75,7 +66,6 @@
                                 {% endblock %}
                             </div>
                         {% endif %}
-
                         <div id="utility-search-wrapper"
                              class="ml-auto d-sm-block d-md-flex justify-content-end flex-grow-1"
                              role="navigation" aria-label="Secondary">
@@ -87,7 +77,6 @@
                                     {% endblock %}
                                 </div>
                             {% endif %}
-
                             {# Search #}
                             {% if page.search %}
                                 <div id="search-container">
@@ -95,7 +84,7 @@
                                         <button class="btn btn-primary fa fa-search" title="open search" role="button"
                                                 data-toggle="collapse" data-target="#gt-search" aria-expanded="false"
                                                 aria-controls="expandable">
-                                            <span class="sr-only" role="presentation">Open Search</span>
+                                            <span class="sr-only" role="presentation">{{ 'Open Search'|t }}</span>
                                         </button>
                                     </div>
                                     <div id="gt-search" class="collapse absolute">
