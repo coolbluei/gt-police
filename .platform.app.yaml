@@ -22,10 +22,6 @@ runtime:
 relationships:
     database: 'db:mysql'
 
-dependencies:
-    php:
-        composer/composer: "^2"
-
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
