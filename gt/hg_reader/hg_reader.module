@@ -32,7 +32,7 @@ function hg_reader_cron() {
     // TODO: first->getValue can probably be replaced with some other method.
     $last_run = $importer->get('last_run')->first()->getValue()['value'];
     $frequency = $importer->get('frequency')->first()->getValue()['value'];
-    if ((time() - $last_run) > $frequency) {
+    if (TRUE) { //} ((time() - $last_run) > $frequency) {
       $controller->process_importer($importer);
     }
   }

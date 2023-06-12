@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68c0da125a0ecbf7a0df61986bd63351",
+    "content-hash": "b2d5547f3c91ea514eceb0ca4f145fa7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -764,16 +764,16 @@
         },
         {
             "name": "consolidation/self-update",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/self-update.git",
-                "reference": "714b09fdf0513f83292874bb12de0566066040c2"
+                "reference": "972a1016761c9b63314e040836a12795dff6953a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/self-update/zipball/714b09fdf0513f83292874bb12de0566066040c2",
-                "reference": "714b09fdf0513f83292874bb12de0566066040c2",
+                "url": "https://api.github.com/repos/consolidation/self-update/zipball/972a1016761c9b63314e040836a12795dff6953a",
+                "reference": "972a1016761c9b63314e040836a12795dff6953a",
                 "shasum": ""
             },
             "require": {
@@ -813,9 +813,9 @@
             "description": "Provides a self:update command for Symfony Console applications.",
             "support": {
                 "issues": "https://github.com/consolidation/self-update/issues",
-                "source": "https://github.com/consolidation/self-update/tree/2.1.0"
+                "source": "https://github.com/consolidation/self-update/tree/2.2.0"
             },
-            "time": "2023-02-21T19:33:55+00:00"
+            "time": "2023-03-18T01:37:41+00:00"
         },
         {
             "name": "consolidation/site-alias",
@@ -3870,45 +3870,51 @@
         {
             "name": "gt/gt_profile",
             "version": "v3.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.gatech.edu/ICWebTeam/gt_profile.git",
+            "dist": {
+                "type": "path",
+                "url": "gt/gt_profile",
                 "reference": "512c42bfd27cc3b9aa2e912abd716bb7045cf5ff"
             },
             "type": "drupal-profile",
             "description": "GT install profile 3.x",
-            "time": "2022-12-07T14:25:19+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "gt/gt_theme",
             "version": "v3.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.gatech.edu/ICWebTeam/gt_theme-8.x.git",
+            "dist": {
+                "type": "path",
+                "url": "gt/gt_theme",
                 "reference": "ccbedd57e9fff0b52eaa3d0bf5b4736f92ca1af6"
             },
             "type": "drupal-theme",
             "description": "The GT 3.x theme",
-            "time": "2022-12-07T14:23:04+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "gt/gt_tools",
             "version": "v3.0.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.gatech.edu/ICWebTeam/gt_tools-8.x.git",
+            "dist": {
+                "type": "path",
+                "url": "gt/gt_tools",
                 "reference": "ade3981fad1015d1f06e184e028f88428e24b2b1"
             },
             "type": "drupal-module",
             "description": "Provides the gt_tools module, duh.",
-            "time": "2023-06-07T18:27:57+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "gt/hg_reader",
             "version": "2.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.gatech.edu/ICWebTeam/hg_reader-8.x.git",
+            "dist": {
+                "type": "path",
+                "url": "gt/hg_reader",
                 "reference": "b717d7df18b374e8b2b98ef561708c34666ce15b"
             },
             "require": {
@@ -3917,7 +3923,9 @@
             },
             "type": "drupal-module",
             "description": "Provides the hg_reader module of course.",
-            "time": "2023-03-23T18:14:09+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "guzzlehttp/guzzle",

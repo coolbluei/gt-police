@@ -16,20 +16,20 @@
       "url": "https://packages.drupal.org/8"
     },
     {
-      "type": "vcs",
-      "url": "https://github.gatech.edu/ICWebTeam/gt_profile.git"
+      "type": "path",
+      "url": "gt/gt_profile"
     },
     {
-      "type": "vcs",
-      "url": "https://github.gatech.edu/ICWebTeam/gt_theme-8.x.git"
+      "type": "path",
+      "url": "gt/gt_theme"
     },
     {
-      "type": "vcs",
-      "url": "https://github.gatech.edu/ICWebTeam/gt_tools-8.x.git"
+      "type": "path",
+      "url": "gt/gt_tools"
     },
     {
-      "type": "vcs",
-      "url": "https://github.gatech.edu/ICWebTeam/hg_reader-8.x.git"
+      "type": "path",
+      "url": "gt/hg_reader"
     },
     {
       "type": "package",
