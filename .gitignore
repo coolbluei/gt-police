@@ -34,3 +34,5 @@
 *.sql.gz
 *.mysql.gz
 db/
+*.zip
+*.gz

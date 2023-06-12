@@ -29,6 +29,7 @@ dependencies:
     - node.type.hg_event
   module:
     - datetime_range
+    - text
     - user
 _core:
   default_config_hash: s8VmzALnH1tNFNOdZzFGKGEuv3G_0lAX9EdkE-TIbZs
@@ -39,13 +40,28 @@ mode: teaser
 content:
   field_hg_event_time:
     type: daterange_default
-    label: above
+    label: visually_hidden
     settings:
       timezone_override: ''
       format_type: medium
       separator: '-'
     third_party_settings: {  }
+    weight: 3
+    region: content
+  field_hg_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 1
+    region: content
+  field_hg_summary_sentence:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }
@@ -72,5 +88,3 @@ hidden:
   field_hg_related_links: true
   field_hg_sidebar: true
   field_hg_source_updated: true
-  field_hg_summary: true
-  field_hg_summary_sentence: true

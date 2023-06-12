@@ -9,7 +9,11 @@ config:
     php: lando.php.ini
 services:
   appserver:
-    build:
+    build_as_root:
+      - apt-get update -y
+      - apt-get install libxslt1-dev -y
+      - docker-php-ext-install xsl
+      - docker-php-ext-enable xsl
       - composer install
     overrides:
       environment:
