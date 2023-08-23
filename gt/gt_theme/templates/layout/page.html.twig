@@ -51,14 +51,20 @@
 * @see html.html.twig
 */
 #}
+{# Alert #}
+{% if page.alert %}
+    {% block alert %}
+        {{ page.alert }}
+    {% endblock %}
+{% endif %}
 {# Include Header #}
 {% include '@gt/parts/header.html.twig' %}
 {# Main #}
-<div role="main" class="main-container js-quickedit-main-content gt-body-page">
+<div role="main" class="main-container gt-body-page js-quickedit-main-content ">
     {# Banner #}
     {% if page.banner %}
         {% block banner %}
-            <div id="gt-banner" class="jumbotron-fluid" role="complementary">
+            <div id="gt-banner" class="jumbotron-fluid mb-4" role="complementary">
                 {{ page.banner }}
             </div>
         {% endblock %}
@@ -186,20 +192,20 @@
 {# Footer #}
 <footer id="footer" class="gt-footer footer">
     <div class="row">
-        <div class="col-md-12 order-md-12">
+        {% if super_footer %}
+            <div class="col-12 gt-black-superfooter clearfix">
+                {# Super-footer #}
+                <div class="d-block d-md-none button-bar">
+                    <button class="btn-footer w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFooter" aria-expanded="false" aria-controls="collapse">
+                        <p>{{ 'Resources'|t }}</p>
+                    </button>
+                </div>
+                {% include '@gt/parts/super-footer.html.twig' %}
+            </div>
+        {% endif %}
+        <div class="col-12 gt-gold-footer clearfix">
             {# GT Footer #}
             {% include '@gt/parts/footer.html.twig' %}
         </div>
-        {% if super_footer %}
-            <div class="col-md-12 order-md-1">
-                {# Superfooter / Show - Hide #}
-                {# Super-footer #}
-                {% include '@gt/parts/super-footer.html.twig' %}
-                <div class="d-block d-md-none button-bar">
-                    <button class="btn-footer w-100" type="button" data-toggle="collapse" data-target="#collapseFooter">
-                    </button>
-                </div>
-            </div>
-        {% endif %}
     </div> {# End Main Row #}
 </footer> {# End Footer #}

@@ -125,13 +125,12 @@ gt_footer_legal.accreditation:
   weight: 800
 
 gt_footer_legal.report:
-  title: 'Report Free Speech and Censorship Concerns'
+  title: 'Report Free Speech and Censorship Concern'
   description: 'University System of Georgia Ethics and Compliance Reporting Hotline'
   parent: system.admin_structure_menu
   menu_name: gt-footer-legal
   url: https://secure.ethicspoint.com/domain/media/en/gui/76612/index.html
   weight: 900
-
 
 #
 # GT SuperFooter links for "footer first".
@@ -555,11 +554,11 @@ gt-footer-03.entrepreneurship:
   weight: 1000
 
 gt-footer-03.study-abroad:
-  title: 'Study Abroad'
+  title: 'Education Abroad'
   description: 'Georgia Tech Office of International Education'
   parent: system.admin_structure_menu
   menu_name: gt-footer-03
-  url: https://oie.gatech.edu/study-abroad
+  url: https://ea.oie.gatech.edu/
   weight: 1100
 
 gt-footer-03.canvas:
@@ -706,7 +705,7 @@ gt-footer-04.alumni-association:
   description: 'Georgia Tech Alumni Association'
   parent: system.admin_structure_menu
   menu_name: gt-footer-04
-  url: https://gtalumni.org/
+  url: https://www.gtalumni.org/
   weight: 1000
 
 gt-footer-04.alumni-services:
@@ -714,7 +713,7 @@ gt-footer-04.alumni-services:
   description: 'Georgia Tech Alumni Career Services'
   parent: system.admin_structure_menu
   menu_name: gt-footer-04
-  url: https://gtalumni.org/career
+  url: https:/www.gtalumni.org/career
   weight: 1100
 
 gt-footer-04.foundation:

@@ -25,7 +25,7 @@
 * @see template_preprocess_block()
 */
 
-{# Attach the library #}
+{# Import CSS #}
 {{ attach_library('gt/image-copy') }}
 
 {# Preprocess #}
@@ -41,16 +41,18 @@
 {% set text_alignment = (content.field_text_alignment.0) %}
 {% set video = (content.field_video_url.0) %}
 
+{# Depending on the action, set the appropriate action class. #}
+{% if color_background is not empty %}
+    {% set background_class = 'gt-' ~ color_background %}
+{% else %}
+    {% set background_class = '' %}
+{% endif %}
+
 {# Set CSS Container Classes #}
 {% set container_classes = [
-    'my-3',
-    'mb-4',
-    'w-100',
-    'shadow-sm',
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'clearfix'
 ] %}
 
 {# Depending on the action, set the appropriate action class #}
@@ -65,49 +67,52 @@
     'mx-auto',
     'card',
     'card-transparent',
+    'my-3',
+    'mb-4',
+    'w-100',
+    'clearfix'
 ] %}
 
 {# Content #}
-<div{{ attributes.setAttribute('id', 'superblock').addClass(container_classes, background_class, alignment, card_classes|join(' ')) }}>
+<div{{ attributes.addClass('superblock', container_classes, background_class, alignment, card_classes|join(' ')) }}>
     {# Video #}
     {% if video is not empty %}
-        <div id="card-media" class="card-img-top">
+        <div class="card-media card-img-top">
             {{ video }}
         </div>
         {#  Image with Link #}
     {% elseif fluid_image and content.field_link.0['#url'] is not empty %}
-        <div id="card-media">
-            <a href="{{ link_url }}">
+        <div class="card-media">
+            <a title="{{ link_title }}" aria-label="{{ link_title }}" href="{{ link_url }}">
                 <img class="{{ image_style }} card-img-top" src="{{ image_path }}" loading="lazy" alt="{{ image_alt }}">
             </a>
         </div>
         {# Image Only #}
     {% elseif fluid_image is not empty and content.field_link.0['#url'] is empty %}
-        <div id="card-media">
+        <div class="card-media">
             <img class="{{ image_style }} card-img-top" src="{{ image_path }}" loading="lazy" alt="{{ image_alt }}">
         </div>
     {% else %}
     {% endif %}
-    {# Card Body #}
-    {% if body is not empty or label is not empty %}
-        <div class="card-body {{ text_color }} {{ text_alignment }} px-3 py-3">
-            {# Title #}
-            {{ title_prefix }}
-            {% if label %}
-                <h3{{ title_attributes }}>{{ label }}</h3>
-            {% endif %}
-            {{ title_suffix }}
-            {# Body #}
-            {% if body %}
-                {{ body }}
-            {% else %}
-            {% endif %}
-        </div>
-    {% endif %}
+    {# Verbage #}
+    <div class="card-body {{ text_color }} {{ text_alignment }} px-3 py-3">
+        {# Title #}
+        {{ title_prefix }}
+        {% if label %}
+            <h3{{ title_attributes }}>{{ label }}</h3>
+        {% endif %}
+        {{ title_suffix }}
+        {# Body #}
+        {% if body %}
+            {{ body }}
+        {% else %}
+        {% endif %}
+    </div>
     {# Link #}
-    {% if link_title is not empty %}
-        <div class="card-footer {{ text_alignment }}">
-            <a class="{{ button }}" aria-labelledby="{{ link_title }}" href="{{ link_url }}">{{ link_title }}</a>
+    {% if link_title %}
+        <div class="card-footer {{ text_alignment }} px-3">
+            <a class="{{ button }}" title="{{ link_title }}" aria-label="{{ link_title }}"
+               href="{{ link_url }}">{{ link_title }}</a>
         </div>
     {% else %}
     {% endif %}

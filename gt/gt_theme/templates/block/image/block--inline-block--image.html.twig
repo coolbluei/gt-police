@@ -37,10 +37,10 @@
 
 {# Set CSS Classes #}
 {% set classes = [
-    'my-3',
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    'my-3',
 ] %}
 
 {# Content #}
@@ -54,7 +54,7 @@
         {{ title_suffix }}
         {# Content with image link #}
         {% if image and content.field_link[0]['#url']|render is not empty %}
-            <a href="{{ field_link }}" aria-labelledby="{{ link_title }}">
+            <a href="{{ field_link }}" aria-label="{{ link_title }}">
                 <picture>{{ image }}</picture>
             </a>
             {# Image without Link  #}
