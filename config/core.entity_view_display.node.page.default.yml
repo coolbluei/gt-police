@@ -15,8 +15,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: layout_onecol
@@ -30,43 +30,47 @@ third_party_settings:
             configuration:
               id: 'field_block:node:page:field_carousel'
               label: Carousel
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: entity_reference_revisions_entity_view
+                label: hidden
                 settings:
                   view_mode: default
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 3
+            additional: {  }
           b4043fa8-998e-47fb-adc6-70e06bb949de:
             uuid: b4043fa8-998e-47fb-adc6-70e06bb949de
             region: content
             configuration:
               id: 'field_block:node:page:body'
               label: Body
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: text_default
+                label: hidden
                 settings: {  }
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 4
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
       allowed_blocks:
         'Chaos Tools': {  }
         'Content fields': {  }
@@ -82,10 +86,6 @@ third_party_settings:
         User: {  }
         'User fields': {  }
         core: {  }
-      allowed_layouts: {  }
-      whitelisted_blocks: {  }
-      blacklisted_blocks: {  }
-      restricted_categories: {  }
     allowed_block_categories: {  }
 id: node.page.default
 targetEntityType: node
@@ -94,17 +94,17 @@ mode: default
 content:
   field_carousel:
     type: entity_reference_revisions_entity_view
-    weight: 101
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   body: true

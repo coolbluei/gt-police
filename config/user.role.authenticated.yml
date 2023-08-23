@@ -12,6 +12,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'opt-in or out of google analytics tracking'
   - 'search content'
   - 'use text format basic_html'
   - 'view media'
