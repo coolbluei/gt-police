@@ -197,7 +197,6 @@ function hg_reader_update_8003(&$sandbox) {
 
   // Query all hg_reader content types
   $nids = \Drupal::entityQuery('node')
-      ->accessCheck(FALSE)
       ->condition('type', ['hg_event', 'hg_news'], 'IN')
       ->execute();
 

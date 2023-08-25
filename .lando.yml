@@ -14,7 +14,6 @@ services:
       - apt-get install libxslt1-dev -y
       - docker-php-ext-install xsl
       - docker-php-ext-enable xsl
-      - composer install
     overrides:
       environment:
         DRUSH_OPTIONS_URI: "https://police.lndo.site"
