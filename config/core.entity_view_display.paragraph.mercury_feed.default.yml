@@ -11,11 +11,11 @@ bundle: mercury_feed
 mode: default
 content:
   field_title:
-    type: string
+    weight: 0
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    type: string
     region: content
 hidden: {  }

@@ -38,40 +38,38 @@ mode: teaser
 content:
   field_hg_dateline:
     type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
     weight: 1
     region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_hg_images:
     type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
     weight: 0
     region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   field_hg_location:
     type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 2
     region: content
-  field_hg_summary_sentence:
-    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_hg_summary_sentence:
+    type: string
     weight: 3
     region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   body: true
   field_hg_categories: true

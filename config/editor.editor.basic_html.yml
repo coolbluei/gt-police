@@ -42,7 +42,11 @@ settings:
           name: Tools
           items:
             - Source
-  plugins: {  }
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
 image_upload:
   status: true
   scheme: public

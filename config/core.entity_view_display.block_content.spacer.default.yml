@@ -15,10 +15,10 @@ bundle: spacer
 mode: default
 content:
   field_size:
-    type: list_key
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    type: list_key
     region: content
 hidden: {  }

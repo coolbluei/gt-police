@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: fxOklRTggjGijnUXS8sGVIJl_mrBKX0Sv7iXQfBOXIM
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
@@ -12,3 +10,5 @@ logo:
   path: ''
   url: ''
   use_default: true
+_core:
+  default_config_hash: fxOklRTggjGijnUXS8sGVIJl_mrBKX0Sv7iXQfBOXIM

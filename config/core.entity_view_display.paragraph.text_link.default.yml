@@ -17,14 +17,14 @@ bundle: text_link
 mode: default
 content:
   field_body:
-    type: text_default
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    type: text_default
     region: content
   field_link:
-    type: link
+    weight: 2
     label: hidden
     settings:
       trim_length: null
@@ -35,14 +35,14 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 2
+    type: link
     region: content
   field_title:
-    type: string
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    type: string
     region: content
 hidden: {  }
