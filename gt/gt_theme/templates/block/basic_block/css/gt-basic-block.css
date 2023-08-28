@@ -18,3 +18,8 @@
     color: var(--gt-white);
     text-decoration: none !important;
 }
+
+.gt-basic-block .field--type-link .field--label {
+    position: absolute;
+    left: -9999px;
+}

@@ -438,7 +438,9 @@
 }
 
 .placeholder {
-  color: #262626;
+  color: #262626 !important;
+  background: transparent !important;
+  opacity: 1;
 }
 
 #node-page-layout-builder-form .vertical-tabs__menu-item.is-selected,
