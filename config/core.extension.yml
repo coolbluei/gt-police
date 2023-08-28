@@ -84,9 +84,7 @@ module:
   paragraphs: 11
   gt_profile: 1000
 theme:
-  stable: 0
   gt: 0
-  classy: 0
   gtpd_subtheme: 0
   claro: 0
 profile: gt_profile
