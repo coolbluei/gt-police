@@ -56,6 +56,9 @@ mounts:
         source: local
         source_path: 'console'
 
+dependencies:
+  php:
+    composer/composer: '^2'
 # Configuration of the build of this application.
 build:
     # Automatically run `composer install` on every build.
