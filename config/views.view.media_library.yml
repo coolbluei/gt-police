@@ -5,14 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - image.style.media_library
-  enforced:
-    module:
-      - media_library
   module:
     - image
     - media
     - media_library
     - user
+  enforced:
+    module:
+      - media_library
 _core:
   default_config_hash: dHOSWSHbMJNke0ZBGh1O5KrnwynSOCOpQycITW-pwfs
 id: media_library
@@ -1186,6 +1186,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
       access:
         type: perm
         options:
