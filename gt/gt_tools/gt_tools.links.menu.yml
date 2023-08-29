@@ -705,7 +705,7 @@ gt-footer-04.alumni-association:
   description: 'Georgia Tech Alumni Association'
   parent: system.admin_structure_menu
   menu_name: gt-footer-04
-  url: https://gtalumni.org/
+  url: https://www.gtalumni.org/
   weight: 1000
 
 gt-footer-04.alumni-services:
@@ -713,7 +713,7 @@ gt-footer-04.alumni-services:
   description: 'Georgia Tech Alumni Career Services'
   parent: system.admin_structure_menu
   menu_name: gt-footer-04
-  url: https://gtalumni.org/career
+  url: https:/www.gtalumni.org/career
   weight: 1100
 
 gt-footer-04.foundation:
