@@ -13,8 +13,13 @@ a:hover {
 }
 
 .gt-container div.row > aside {
-  padding-top:  12px;
+  display: flex;
+}
+
+.gt-container div.row > aside > div {
+  padding: 12px;
   background-color: #f8f8f8;
+  margin-top: 12px;
 }
 
 @media screen and (max-width: 991px) {
