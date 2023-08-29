@@ -1,0 +1,29 @@
+uuid: 4572c791-7f4d-4502-bff9-0d6a7cb461b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.mercury_news_and_events
+  module:
+    - system
+    - views
+  theme:
+    - gtpd_subtheme
+id: gtpd_subtheme_views_block__mercury_news_and_events_block_1
+theme: gtpd_subtheme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:mercury_news_and_events-block_1'
+settings:
+  id: 'views_block:mercury_news_and_events-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

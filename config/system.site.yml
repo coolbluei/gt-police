@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
 uuid: b1a1d9b5-54dc-47c1-a14c-02e2b39b4fe6
 name: 'Georgia Tech Police Department'
 mail: admin@example.com
@@ -5,10 +8,7 @@ slogan: 404.894.2500
 page:
   403: ''
   404: ''
-  front: /node/232
+  front: /node/251
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

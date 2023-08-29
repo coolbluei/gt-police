@@ -1,0 +1,30 @@
+uuid: de84007e-8dca-4d6a-acfd-8afcd3053a73
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:73155d79-0c9f-48e0-8b6c-8cdc6643685a'
+  module:
+    - block_content
+    - system
+  theme:
+    - gtpd_subtheme
+id: gtpd_subtheme_georgiatechfrontpagebanner
+theme: gtpd_subtheme
+region: banner
+weight: 0
+provider: null
+plugin: 'block_content:73155d79-0c9f-48e0-8b6c-8cdc6643685a'
+settings:
+  id: 'block_content:73155d79-0c9f-48e0-8b6c-8cdc6643685a'
+  label: 'Georgia Tech Front Page Banner'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

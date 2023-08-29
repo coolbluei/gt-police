@@ -4,6 +4,11 @@ use Drupal\safe_field_getter\SafeFieldGetter;
 use Drupal\node\NodeInterface;
 use Drupal\image\Entity\ImageStyle;
 
+function gtpd_subtheme_preprocess_html(&$variables) {
+  // Need away to override the Bootstrap grid behavior.
+  $variables['attributes']['class'][] = 'sidebar-for-large';
+}
+
 function gtpd_subtheme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
     $node = \Drupal::routeMatch()->getParameter('node');
     if($node instanceof NodeInterface) {
