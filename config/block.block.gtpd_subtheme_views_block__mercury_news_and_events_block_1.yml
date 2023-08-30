@@ -1,6 +1,6 @@
 uuid: 4572c791-7f4d-4502-bff9-0d6a7cb461b0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.mercury_news_and_events

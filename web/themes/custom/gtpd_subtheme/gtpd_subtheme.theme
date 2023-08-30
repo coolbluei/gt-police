@@ -23,14 +23,6 @@ function gtpd_subtheme_preprocess_page(&$variables) {
 
     $node = \Drupal::routeMatch()->getParameter('node');
     if($node instanceof NodeInterface) {
-        if($node->hasField('field_carousel')) {
-            $carousel = SafeFieldGetter::firstReference($node, 'field_carousel');
-            if($carousel) {
-                $rendered_carousel = \Drupal::entityTypeManager()->getViewBuilder('paragraph')->view($carousel);
-                $variables['carousel'] = $rendered_carousel;
-            }
-        }
-
         if($node->hasField('field_hide_title')) {
             $hide_title_value = SafeFieldGetter::firstBoolean($node, 'field_hide_title');
             if($hide_title_value) {

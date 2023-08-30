@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_carousel
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_hide_title
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
     - paragraphs
@@ -15,21 +15,10 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  field_carousel:
-    weight: 2
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: carousel
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
-    region: content
   field_content:
     type: entity_reference_paragraphs
     weight: 3
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -38,14 +27,13 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
   field_hide_title:
+    type: boolean_checkbox
     weight: 1
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   path:
     type: path
     weight: 5
@@ -54,10 +42,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -67,8 +55,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  layout_builder__layout: true
   promote: true
   sticky: true
   uid: true
