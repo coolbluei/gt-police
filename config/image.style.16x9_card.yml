@@ -1,0 +1,15 @@
+uuid: 7b929121-48df-4dd9-a908-1b450ac4c921
+langcode: en
+status: true
+dependencies: {  }
+name: 16x9_card
+label: '16x9 Card'
+effects:
+  2c8f1e66-399e-4a64-84da-6792a5bdac58:
+    uuid: 2c8f1e66-399e-4a64-84da-6792a5bdac58
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 330
+      anchor: center-center

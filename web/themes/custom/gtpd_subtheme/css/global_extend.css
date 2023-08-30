@@ -31,3 +31,25 @@ a:hover {
     max-width: 100%;
   }
 }
+
+body.gtpd-theme .superblock .gt-text-blue h2,
+body.gtpd-theme .superblock .gt-text-blue h3,
+body.gtpd-theme .superblock .gt-text-blue h4,
+body.gtpd-theme .superblock .gt-text-blue h5,
+body.gtpd-theme .superblock .gt-text-blue h6,
+body.gtpd-theme .superblock .gt-text-blue dl,
+body.gtpd-theme .superblock .gt-text-blue ol,
+body.gtpd-theme .superblock .gt-text-blue ul,
+body.gtpd-theme .superblock .gt-text-blue p,
+body.gtpd-theme .superblock .gt-text-blue .p {
+  color: var(--gt-navy);
+}
+
+body.gtpd-theme .card-body {
+  padding: 30px;
+}
+
+body.gtpd-theme .layout__region {
+  margin-bottom: 0;
+}
+
