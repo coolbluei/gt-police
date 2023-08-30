@@ -7,7 +7,7 @@ use Drupal\image\Entity\ImageStyle;
 function gtpd_subtheme_preprocess_html(&$variables) {
   // Need away to override the Bootstrap grid behavior.
   $variables['attributes']['class'][] = 'sidebar-for-large';
-  // A quick class to help overload other rules.
+  // Need a method of overriding base rules
   $variables['attributes']['class'][] = 'gtpd-theme';
 }
 

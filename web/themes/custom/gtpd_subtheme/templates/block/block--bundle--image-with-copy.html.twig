@@ -34,6 +34,7 @@
 {% set fluid_image = (content.field_image.0['#item'].entity.uri.value) ? (file_url(content.field_image.0['#item'].entity.uri.value)) : '' %}
 {% set image_alt = (content.field_image.0['#item'].alt ) %}
 {% set image_path = (content.field_image['#items'].entity.uri.value) ? (file_url(content.field_image['#items'].entity.uri.value)) : '' %}
+{% set alt_image_path = (content.field_image['#items'].entity.uri.value) ? content.field_image['#items'].entity.uri.value | image_style('16x9_card') : '' %}
 {% set image_style = (content.field_image_style.0) %}
 {% set link_url = file_url(content.field_link.0['#url']|render) %}
 {% set link_title = (content.field_link[0]['#title']|render) %}
@@ -68,7 +69,6 @@
     'card',
     'card-transparent',
     'my-3',
-    'mb-4',
     'w-100',
     'clearfix'
 ] %}
@@ -84,13 +84,13 @@
     {% elseif fluid_image and content.field_link.0['#url'] is not empty %}
         <div class="card-media">
             <a title="{{ link_title }}" aria-label="{{ link_title }}" href="{{ link_url }}">
-                <img class="{{ image_style }} card-img-top" src="{{ image_path }}" loading="lazy" alt="{{ image_alt }}">
+                <img class="{{ image_style }} card-img-top" src="{{ alt_image_path }}" loading="lazy" alt="{{ image_alt }}">
             </a>
         </div>
         {# Image Only #}
     {% elseif fluid_image is not empty and content.field_link.0['#url'] is empty %}
         <div class="card-media">
-            <img class="{{ image_style }} card-img-top" src="{{ image_path }}" loading="lazy" alt="{{ image_alt }}">
+            <img class="{{ image_style }} card-img-top" src="{{ alt_image_path }}" loading="lazy" alt="{{ image_alt }}">
         </div>
     {% else %}
     {% endif %}

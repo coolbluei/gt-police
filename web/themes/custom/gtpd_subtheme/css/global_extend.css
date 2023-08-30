@@ -44,3 +44,11 @@ body.gtpd-theme .superblock .gt-text-blue p,
 body.gtpd-theme .superblock .gt-text-blue .p {
   color: var(--gt-navy);
 }
+
+body.gtpd-theme .card-body {
+  padding: 30px;
+}
+
+body.gtpd-theme .layout__region {
+  margin-bottom: 0;
+}
