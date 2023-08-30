@@ -25,6 +25,7 @@
 
 .gtpd-icon::before {
   display: block;
+  min-height: 42px;
 }
 
 .gtpd-facebook::before {
