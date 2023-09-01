@@ -5,6 +5,11 @@ dependencies:
   module:
     - node
     - video_embed_field
+  enforced:
+    module:
+      - hg_reader
+_core:
+  default_config_hash: 1RRpJFVxxWJ9nTz1sBKKaiBpXcRD5qteb87sZd3Mn9U
 id: node.field_hg_youtube_video
 field_name: field_hg_youtube_video
 entity_type: node

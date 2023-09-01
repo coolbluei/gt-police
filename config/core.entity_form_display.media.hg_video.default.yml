@@ -8,6 +8,8 @@ dependencies:
   module:
     - media
     - path
+_core:
+  default_config_hash: 757VrNGq7kxAwShp-AZ1CiGjnzEC7LRkqztE_Oiqybk
 id: media.hg_video.default
 targetEntityType: media
 bundle: hg_video

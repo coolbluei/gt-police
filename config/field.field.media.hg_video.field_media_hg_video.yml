@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.media.field_media_hg_video
     - media.type.hg_video
+_core:
+  default_config_hash: OkpCvEp1siB_G84D8Nm2zGVGI_4FRbihoscOGjGz72Y
 id: media.hg_video.field_media_hg_video
 field_name: field_media_hg_video
 entity_type: media

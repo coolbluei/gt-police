@@ -10,7 +10,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: dxJNiqeLrsH7Q9yKuR1B6sY_nqkREMPqralvhwbipes
+  default_config_hash: 8SPb-tC8Udfp576zo1EnjfnOjfyQ6Nzo_xYGF4jApX0
 id: hg_news
 label: 'Recent news'
 module: views

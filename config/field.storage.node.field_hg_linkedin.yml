@@ -8,6 +8,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: cwaIvAqNNRoftNdBClfWW_5x5G-6E0m0fozeboI1bfc
 id: node.field_hg_linkedin
 field_name: field_hg_linkedin
 entity_type: node

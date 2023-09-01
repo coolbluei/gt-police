@@ -5,6 +5,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: fDEWnheUKWBgfzA1aGGmGDE5jL72KEwLZXvq2n0KfUw
 name: 'Areas of expertise'
 vid: hg_areas_of_expertise
 description: 'Areas of expertise for Mercury profiles'

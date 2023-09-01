@@ -9,7 +9,7 @@ dependencies:
     module:
       - hg_reader
 _core:
-  default_config_hash: q-N-nrL6kaTFUUGuLN99qhpK_y5BYgO0xzYKW4qov2I
+  default_config_hash: bUfA0ELoNz8mHwLmLyqNwU2_cjf53iaFKeCac0oMyx8
 id: node.field_hg_extras
 field_name: field_hg_extras
 entity_type: node

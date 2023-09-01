@@ -46,7 +46,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 9lW0cc9MjoZy5pUhZ4jeclSbjTMiK5CquvnTZ06E6zw
+  default_config_hash: 1VTibOqFyT_Ikb5hhsppJ5U9LUOljNM-xRyt-cOJIRk
 id: node.hg_profile.default
 targetEntityType: node
 bundle: hg_profile
@@ -269,7 +269,7 @@ content:
       custom_date_format: ''
       timezone: ''
       tooltip:
-        date_format: ''
+        date_format: long
         custom_date_format: ''
       time_diff:
         enabled: false

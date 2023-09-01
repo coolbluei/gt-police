@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_hg_specialty
     - node.type.hg_profile
+_core:
+  default_config_hash: csPRUZGVBOUmXgjwx2B8kAs-VBdbRUyMGDyffVamMGI
 id: node.hg_profile.field_hg_specialty
 field_name: field_hg_specialty
 entity_type: node

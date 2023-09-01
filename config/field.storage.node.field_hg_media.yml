@@ -8,6 +8,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: o2LsZvo1GO0q3HCV0x3Gl--sGdFgLBdaR4oG36RGfLY
 id: node.field_hg_media
 field_name: field_hg_media
 entity_type: node

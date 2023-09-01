@@ -7,6 +7,8 @@ dependencies:
     - media.type.hg_video
   module:
     - media
+_core:
+  default_config_hash: xWdi29C-b7owatxMdzi1Kk-8tm-RQzvXwZ4tx4kyR1k
 id: media.hg_video.default
 targetEntityType: media
 bundle: hg_video

@@ -31,7 +31,7 @@ dependencies:
     - datetime_range
     - user
 _core:
-  default_config_hash: s8VmzALnH1tNFNOdZzFGKGEuv3G_0lAX9EdkE-TIbZs
+  default_config_hash: 8wlb3x4g5ltroeaISgNCmsCRbWiAT0KZFTVHkzXmXNY
 id: node.hg_event.teaser
 targetEntityType: node
 bundle: hg_event

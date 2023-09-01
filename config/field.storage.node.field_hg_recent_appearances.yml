@@ -7,6 +7,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: sA65b2Hm_JTgE3EiUKxEGIv8x-KgZr8dhLCiYeM7eIs
 id: node.field_hg_recent_appearances
 field_name: field_hg_recent_appearances
 entity_type: node

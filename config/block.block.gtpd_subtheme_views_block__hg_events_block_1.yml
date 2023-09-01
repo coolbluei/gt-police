@@ -1,22 +1,22 @@
-uuid: 4572c791-7f4d-4502-bff9-0d6a7cb461b0
+uuid: f5ad65fa-8508-41a8-a2d7-da521c8ee367
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.mercury_news_and_events
+    - views.view.hg_events
   module:
     - system
     - views
   theme:
     - gtpd_subtheme
-id: gtpd_subtheme_views_block__mercury_news_and_events_block_1
+id: gtpd_subtheme_views_block__hg_events_block_1
 theme: gtpd_subtheme
 region: sidebar_second
-weight: -7
+weight: 0
 provider: null
-plugin: 'views_block:mercury_news_and_events-block_1'
+plugin: 'views_block:hg_events-block_1'
 settings:
-  id: 'views_block:mercury_news_and_events-block_1'
+  id: 'views_block:hg_events-block_1'
   label: ''
   label_display: visible
   provider: views

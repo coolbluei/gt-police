@@ -31,8 +31,9 @@ dependencies:
     - link
     - text
     - user
+    - video_embed_field
 _core:
-  default_config_hash: tdT8I_8ff21LADZUbc4O86mrE-bWtwzFqUZWwUx6J0E
+  default_config_hash: rUhL5yjW7GQtzf32SWw3UCRV-Aj-7qtMo56D5kz8UFw
 id: node.hg_news.default
 targetEntityType: node
 bundle: hg_news
@@ -170,7 +171,7 @@ content:
       custom_date_format: ''
       timezone: ''
       tooltip:
-        date_format: ''
+        date_format: long
         custom_date_format: ''
       time_diff:
         enabled: false
@@ -204,10 +205,20 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_hg_youtube_video:
+    weight: 14
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_hg_youtube_video: true
+hidden: {  }

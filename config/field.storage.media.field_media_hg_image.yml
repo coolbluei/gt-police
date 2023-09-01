@@ -9,6 +9,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: KPQrI-r_3oxFoAgPnCQcZhiAieEW22IBXITUREGiQVM
 id: media.field_media_hg_image
 field_name: field_media_hg_image
 entity_type: media

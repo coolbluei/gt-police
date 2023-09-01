@@ -44,7 +44,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: jrmvs4x_BumpzdTNLoGkO2uZGH6AT5_NlVh9s0GMUDI
+  default_config_hash: ylX6mjTj_3sQnSRTyLru1vWIy4hjWxqPc9hfjTihi5o
 id: node.hg_profile.teaser
 targetEntityType: node
 bundle: hg_profile

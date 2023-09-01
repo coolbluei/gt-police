@@ -7,6 +7,8 @@ dependencies:
     - media.type.hg_image
   module:
     - image
+_core:
+  default_config_hash: fCZogIWf2DyQnt2r8RuVUFx95ZYDbnnZXP5Enox6MS8
 id: media.hg_image.field_media_hg_image
 field_name: field_media_hg_image
 entity_type: media

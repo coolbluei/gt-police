@@ -7,6 +7,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: f0hxYdYqA0pXT8YYTfb56wZuFp9vZXqcK8cmtH-XHw0
 id: media.field_media_hg_video
 field_name: field_media_hg_video
 entity_type: media

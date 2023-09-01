@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.hg_profile.field_hg_job_title
     - field.field.node.hg_profile.field_hg_last_name
     - field.field.node.hg_profile.field_hg_linkedin
+    - field.field.node.hg_profile.field_hg_media
     - field.field.node.hg_profile.field_hg_middle_name
     - field.field.node.hg_profile.field_hg_mobile_phone
     - field.field.node.hg_profile.field_hg_nickname
@@ -102,7 +103,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: 6iDJV0HRgIHHxEXZumZd9Xhd_AuPRyW5f8lFpeA8xj4
+  default_config_hash: UDleaEndwk0zzZsfTYU_CyhYBMWo-1HLIZ0D8kzClhE
 id: node.hg_profile.default
 targetEntityType: node
 bundle: hg_profile

@@ -9,6 +9,8 @@ dependencies:
   module:
     - image
     - path
+_core:
+  default_config_hash: 7nUD4YcyfkBvDLRWbYY7NNCIa7zsPtCsiIR5BtnnDjU
 id: media.hg_image.default
 targetEntityType: media
 bundle: hg_image

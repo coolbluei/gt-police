@@ -7,6 +7,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: kRKBSH0OPptidNDFQtZotBA8bI9uDXqBhAJBh0GstZ0
 id: node.field_hg_college_school
 field_name: field_hg_college_school
 entity_type: node

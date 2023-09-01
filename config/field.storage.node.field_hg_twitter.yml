@@ -8,6 +8,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: LInWS3GlVwtSt-yBuHoMltcWrk_rgcsSB3WuSNRIqBg
 id: node.field_hg_twitter
 field_name: field_hg_twitter
 entity_type: node

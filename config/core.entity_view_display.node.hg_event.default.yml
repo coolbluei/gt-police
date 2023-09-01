@@ -36,7 +36,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: rX55awD5_V91myYBNgUk5SY9X7YOeJGtoQGCBeE0S7Y
+  default_config_hash: KfIdD1VEig0fC1tUZFtPRYhqOs9MNNRR307Jio8IrE0
 id: node.hg_event.default
 targetEntityType: node
 bundle: hg_event
@@ -210,7 +210,7 @@ content:
       custom_date_format: ''
       timezone: ''
       tooltip:
-        date_format: ''
+        date_format: long
         custom_date_format: ''
       time_diff:
         enabled: false

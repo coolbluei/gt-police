@@ -112,7 +112,7 @@ third_party_settings:
         id: ''
         effect: none
 _core:
-  default_config_hash: K7EZBmHXsGou-jhbL_bHvZqzpcAJ0rYKCHaApJGgcf8
+  default_config_hash: Ecy3iKfHqszDvzTLU21Mmv8YKzwoBLQgfqTM_Hsm7XI
 id: node.hg_event.default
 targetEntityType: node
 bundle: hg_event
@@ -343,4 +343,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

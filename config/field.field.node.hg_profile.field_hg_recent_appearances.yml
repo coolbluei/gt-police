@@ -7,6 +7,8 @@ dependencies:
     - node.type.hg_external_news
     - node.type.hg_news
     - node.type.hg_profile
+_core:
+  default_config_hash: FsaIW5zOU2ftoNqKiDZE_r6OG_X6CKojuuKzgIDuH8Y
 id: node.hg_profile.field_hg_recent_appearances
 field_name: field_hg_recent_appearances
 entity_type: node

@@ -5,6 +5,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: sNhEUNV97BtjjXscvtjPqMOboe-cDcTmdKsQNXyPX5c
 id: hg_video
 label: 'Mercury video'
 description: 'Media container for videos pulled from Mercury sources.'

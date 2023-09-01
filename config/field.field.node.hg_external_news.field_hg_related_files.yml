@@ -8,7 +8,7 @@ dependencies:
   module:
     - file
 _core:
-  default_config_hash: VfeGaTTZD8cGZb5aJdHoIkTPs9mllBsnJtQ261rap-4
+  default_config_hash: KKE6pad_Z-54NWHumifHSwe41moV8kQleLRd6ZlUlBg
 id: node.hg_external_news.field_hg_related_files
 field_name: field_hg_related_files
 entity_type: node
@@ -21,7 +21,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: 'hg_attachments/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp svg'
+  file_extensions: 'doc docx jpg jpeg gif odp ods odt pdf png pps ppt svg txt xls'
   max_filesize: '2 MB'
   description_field: false
   handler: 'default:file'

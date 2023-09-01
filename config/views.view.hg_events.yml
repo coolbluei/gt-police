@@ -5,12 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.hg_event
+    - node.type.hg_news
   module:
     - datetime
     - node
     - user
 _core:
-  default_config_hash: CD6yqQfo9yZkosBcrA8oraftFUPsjz_ftqNWU0TZI7w
+  default_config_hash: Z2rJOQRfYhJwzwgZd2DlL-DXRVxAmGQqidRB0jnu7pc
 id: hg_events
 label: 'Mercury events'
 module: views
@@ -156,28 +157,16 @@ display:
           id: type
           table: node_field_data
           field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            hg_event: hg_event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_hg_event_time_end_value:
-          id: field_hg_event_time_end_value
-          table: node__field_hg_event_time
-          field: field_hg_event_time_end_value
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: datetime
-          operator: '>='
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
           value:
-            min: ''
-            max: ''
-            value: now
-            type: offset
+            hg_event: hg_event
+            hg_news: hg_news
           group: 1
           exposed: false
           expose:
@@ -194,9 +183,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
+            reduce: false
           is_grouped: false
           group_info:
             label: ''

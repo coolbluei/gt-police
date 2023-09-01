@@ -124,7 +124,7 @@ third_party_settings:
         required_fields: true
       label: Media
 _core:
-  default_config_hash: guq8QlViGA2EMKMjNNFuPiX-79pBGVC9-MwpDnztyGc
+  default_config_hash: 3ZM2B2Bv-KaVupbvu8bYXEGI_fnUBsafoeTnkRs7dno
 id: node.hg_news.default
 targetEntityType: node
 bundle: hg_news
@@ -202,12 +202,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_hg_youtube_video:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
     region: content
   field_hg_importer:
     weight: 15
@@ -297,6 +291,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_hg_youtube_video:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
   path:
     type: path
     weight: 18
@@ -342,4 +342,9 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

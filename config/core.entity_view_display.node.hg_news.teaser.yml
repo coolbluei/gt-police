@@ -30,7 +30,7 @@ dependencies:
     - image
     - user
 _core:
-  default_config_hash: w6tW3r3LaGRZ07b-CyQIYNhKNCDd8fSGUX_WopwAk_4
+  default_config_hash: _hFM9QGoAt1mPc_caKVwiCHEDvLOlPBiVgA6PlYV0-Q
 id: node.hg_news.teaser
 targetEntityType: node
 bundle: hg_news

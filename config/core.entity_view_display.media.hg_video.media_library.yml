@@ -9,6 +9,8 @@ dependencies:
     - media.type.hg_video
   module:
     - image
+_core:
+  default_config_hash: BD_aj5QMYDmjRnVXYdM-JImkgclrkKStTarbOTNL_IE
 id: media.hg_video.media_library
 targetEntityType: media
 bundle: hg_video

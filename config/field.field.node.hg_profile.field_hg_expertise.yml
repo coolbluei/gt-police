@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_hg_expertise
     - node.type.hg_profile
     - taxonomy.vocabulary.hg_areas_of_expertise
+_core:
+  default_config_hash: PD_WPFOjxuULRYQ1tsWbstDXI6VhYNmiHN4dPaPsIq0
 id: node.hg_profile.field_hg_expertise
 field_name: field_hg_expertise
 entity_type: node

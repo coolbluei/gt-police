@@ -7,6 +7,8 @@ dependencies:
     - media.type.hg_image
     - media.type.hg_video
     - node.type.hg_profile
+_core:
+  default_config_hash: _vMxeDp6eCg3WVEx5sno3567f4sKHmxEIJ0pCJHsDl8
 id: node.hg_profile.field_hg_media
 field_name: field_hg_media
 entity_type: node

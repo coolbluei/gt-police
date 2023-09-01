@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_hg_groups
     - node.type.hg_event
+_core:
+  default_config_hash: mwaIpkEhoUhI4x3bPRT-8Vba4HrvaUEIVwcuEwhsSzw
 id: node.hg_event.field_hg_groups
 field_name: field_hg_groups
 entity_type: node

@@ -6,6 +6,8 @@ dependencies:
     - core.entity_form_mode.media.media_library
     - field.field.media.hg_video.field_media_hg_video
     - media.type.hg_video
+_core:
+  default_config_hash: BB5u5Xil_4Odr7dXADEiX0wHF1uO-7z0b7-MJYutb3Y
 id: media.hg_video.media_library
 targetEntityType: media
 bundle: hg_video

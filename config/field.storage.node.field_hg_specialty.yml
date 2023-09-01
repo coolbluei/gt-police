@@ -7,6 +7,8 @@ dependencies:
   enforced:
     module:
       - hg_reader
+_core:
+  default_config_hash: RUTkhLf4-21Xripsqpcx95H2SbuAnQp46OU_O51pgTo
 id: node.field_hg_specialty
 field_name: field_hg_specialty
 entity_type: node

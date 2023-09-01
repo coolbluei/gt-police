@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_hg_college_school
     - node.type.hg_profile
+_core:
+  default_config_hash: vZBr_tRSnlZrMsOZlNTguoITSR98zQ711jj9LT-kDHA
 id: node.hg_profile.field_hg_college_school
 field_name: field_hg_college_school
 entity_type: node
