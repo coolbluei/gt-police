@@ -71,12 +71,27 @@ body.gtpd-theme .main-nav .dropdown-item.menu-item--level-2 > a:visited {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(80,80,80, 0.5);
-  padding: 2em;
-  color: white;
+  background-color: rgba(38, 38, 38, 0.80);
+  padding: 20px 15px;
+  color: #FFF;
+  font-family: "din-2014", sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .block-hero-image .title-container .field--name-field-title {
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.block-hero-image .title-container .field--name-field-sub-title {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+@media screen and (max-width: 576px) {
+  .block-hero-image .title-container {
+    position: relative;
+    background-color: #262626;
+  }
 }
