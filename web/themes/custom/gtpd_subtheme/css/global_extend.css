@@ -61,3 +61,22 @@ body.gtpd-theme .main-nav .dropdown-item.menu-item--level-2 > a:visited {
   color: var(--gt-drk-gold);
   font-weight: 700;
 }
+
+.block-hero-image {
+  position: relative;
+}
+
+.block-hero-image .title-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(80,80,80, 0.5);
+  padding: 2em;
+  color: white;
+}
+
+.block-hero-image .title-container .field--name-field-title {
+  font-size: 2em;
+  font-weight: bold;
+}

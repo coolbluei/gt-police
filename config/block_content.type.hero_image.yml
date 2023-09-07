@@ -1,0 +1,8 @@
+uuid: 98810685-3816-4597-882e-137bdda6c812
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image
+label: 'Hero Image'
+revision: 0
+description: 'GT Police specific Hero image for the top of pages.  Should include optional Title and sub-title.'
