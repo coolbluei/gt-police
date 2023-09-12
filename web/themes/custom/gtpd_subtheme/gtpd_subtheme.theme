@@ -1,8 +1,10 @@
 <?php
 
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\safe_field_getter\SafeFieldGetter;
 use Drupal\node\NodeInterface;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\taxonomy\Entity\Term;
 
 function gtpd_subtheme_preprocess_html(&$variables) {
   // Need away to override the Bootstrap grid behavior.
@@ -31,6 +33,26 @@ function gtpd_subtheme_preprocess_page(&$variables) {
         }
     }
 }
+
+function gtpd_subtheme_preprocess_block(&$variables)
+{
+  $content = $variables['elements']['content'] ?? NULL;
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContent) {
+    $type = $content['#block_content']->bundle();
+    if ($type === 'banner' or $type === 'call_to_action' or $type === 'image_with_copy') {
+      $term = Term::load($content['#block_content']->get('field_style')->getString());
+      if (!isset($variables['attributes']['class'])) {
+        $variables['attributes']['class'] = [];
+      }
+      $variables['attributes']['class'][] = 'gt-style-' . _gtpd_string_manipulation($term->getName());
+    }
+  }
+}
+
+function _gtpd_string_manipulation(mixed $mixed) {
+  return str_replace(' ', '-', strtolower((string) $mixed));
+}
+
 
 function gtpd_subtheme_preprocess_paragraph__carousel_slide(&$variables) {
     $paragraph = $variables['paragraph'];

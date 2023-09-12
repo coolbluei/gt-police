@@ -4,6 +4,43 @@
   text-decoration: underline;
 }
 
+body.gtpd-theme h1,
+body.gtpd-theme h2,
+body.gtpd-theme h3,
+body.gtpd-theme h4 {
+  font-family: "din-2014", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--gt-navy, #003057);
+}
+
+body.gtpd-theme h1 {
+
+  font-size: 38px;
+  line-height: 48px;
+}
+body.gtpd-theme h2 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+body.gtpd-theme h3 {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+body.gtpd-theme h4 {
+  font-size: 22px;
+  line-height: 32px;
+}
+body.gtpd-theme p {
+  color: var(--gt-text-black, #262626);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
 a:hover {
   color: var(--gt-md-gold, #857237);
 }
@@ -45,16 +82,6 @@ body.gtpd-theme .superblock .gt-text-blue .p {
   color: var(--gt-navy);
 }
 
-body.gtpd-theme .card-body {
-  padding: 30px;
-}
-
-body.gtpd-theme .layout__region {
-  margin-bottom: 0;
-}
-
-
-
 body.gtpd-theme .main-nav .dropdown-item.menu-item--level-2 > a,
 body.gtpd-theme .main-nav .dropdown-item.menu-item--level-2 > a:link,
 body.gtpd-theme .main-nav .dropdown-item.menu-item--level-2 > a:visited {
@@ -94,4 +121,43 @@ body.gtpd-theme .main-nav .dropdown-item.menu-item--level-2 > a:visited {
     position: relative;
     background-color: #262626;
   }
+}
+
+
+body.gtpd-theme .card-body {
+  padding: 10px 30px 0;
+}
+
+body.gtpd-theme .layout__region {
+  margin-bottom: 0;
+}
+
+body.gtpd-theme .gt-style-gtpd.card {
+  border: 1px solid var(--gt-md-gold, #A4925A);
+}
+body.gtpd-theme .gt-style-gtpd h3 {
+  color: var(--gt-navy, #003057);
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+body.gtpd-theme .gt-style-gtpd p {
+  margin-bottom: 15px;
+}
+
+body.gtpd-theme .gt-style-gtpd a.btn {
+  background: none;
+  border: 0 transparent;
+  border-radius: 0;
+  color: var(--gt-navy, #003057);
+  padding: 0;
+  font-size: 20px;
+  line-height: 32px;
+  text-decoration-line: underline;
+}
+
+body.gtpd-theme .gt-style-gtpd a.btn:hover {
+  color: var(--gt-md-gold, #857237);
 }
